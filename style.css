@@ -25,18 +25,27 @@ picture {
 ul {
   list-style: none;
 }
+h1,
+h2,
+h3 {
+  font-family: var(--font);
+}
 p {
-  font-size: .9375rem;
+  max-width: 40ch;
+  font-size: 0.9375rem;
   font-family: var(--font);
   line-height: 1.5;
-}i {
-  font-style: italic;
-  font-size: .7rem;
+}
+a {
+  font-size: 0.9375rem;
+  font-family: var(--font);
+  text-decoration: none;
 }
 :root {
   --font: "Inter", sans-serif;
 }
 nav {
+  z-index: 100;
   position: fixed;
   width: 100%;
   padding: 8px 5%;
@@ -44,7 +53,8 @@ nav {
   justify-content: space-between;
   background: lightblue;
 }
-#top-logo {
+#top-logo,
+#footer-logo {
   display: block;
   width: 32px;
 }
@@ -58,10 +68,11 @@ nav {
   right: 100%;
 }
 header {
-  margin-inline: 5%;
+  padding-inline: 5%;
   height: 100svh;
   display: grid;
   align-items: center;
+
   & h1 {
     font-size: 2rem;
     font-weight: 700;
@@ -69,9 +80,9 @@ header {
   }
 }
 #profile-img {
-  /* display: block; */
   width: 125px;
   height: 125px;
+  border-radius: 1rem;
   overflow: hidden;
 
   & img {
@@ -79,18 +90,22 @@ header {
   }
 }
 main {
-  padding-inline: 5%;
+  padding: 32px 5%;
+  display: grid;
+  gap: 2rem;
 }
-.about p {
-  line-height: 1.5;
-
-  &:last-of-type {
-    margin-top: 10px;
+.about {
+  & h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+  & p:first-of-type {
+    margin-bottom: 10px;
   }
 }
 .skills {
   display: grid;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 .card {
   display: grid;
@@ -104,7 +119,7 @@ main {
   gap: 1.5rem;
 
   & p {
-    font-size: .875rem;
+    font-size: 0.875rem;
   }
 }
 .card-title {
@@ -132,7 +147,7 @@ main {
   }
   & ul {
     display: grid;
-    gap: .5rem;
+    gap: 0.5rem;
   }
   & ul li {
     display: flex;
@@ -142,5 +157,55 @@ main {
     & figure {
       width: 30px;
     }
+  }
+}
+
+.works {
+  & h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  & div {
+    display: grid;
+    gap: 1.5rem;
+  }
+}
+.work-img,
+.work-link {
+  display: grid;
+  place-items: center;
+}
+.work-img {
+  position: relative;
+  margin-bottom: 1rem;
+
+  & .work-link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: hsla(0, 0%, 53%, 0.5);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.work-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: var(--font);
+}
+
+footer {
+  padding: 32px 5%;
+  display: grid;
+  gap: 1rem;
+}
+.footer-social {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 10px;
+  & li {
+    width: 32px;
   }
 }
