@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
     <title>Kendpr Markdown</title>
   </head>
   <body>
@@ -19,7 +26,9 @@
     </nav>
     <header>
       <div>
-        <figure><img src="./assets/" alt="Kendpr's Photo " /></figure>
+        <div id="profile-img">
+          <img src="./assets/profile-cat.jpg" alt="Kendpr's Photo" />
+        </div>
         <h1>Hi, Im Ken</h1>
         <p>Front-end Developer &amp; Photo Editor</p>
       </div>
@@ -35,75 +44,115 @@
           I have not yet discovered the whole web development, but I am
           constantly learning to improve my skills.
         </p>
+      </div>
+      <div class="skills">
         <article class="card">
-          <div class="card-title">
-            <img src="./assets/frontend-icon.svg" alt="" />
-            <h2>Front-end Development</h2>
+          <div class="card-header">
+            <div class="card-title">
+              <figure><img src="./assets/frontend-icon.svg" alt="" /></figure>
+              <h2>Front-end Development</h2>
+            </div>
+            <p>
+              Coding from empty document gives you more flexbility and
+              customizations
+            </p>
           </div>
-          <p>
-            Coding from empty document gives you more flexbility and
-            customizations
-          </p>
           <div class="card-list">
             <h3>Languages that I use</h3>
             <ul>
               <li>
-                <img src="./assets/html5-icon.svg" alt="" />
+                <figure><img src="./assets/html5-icon.svg" alt="" /></figure>
                 <p>Semantic HTML</p>
               </li>
               <li>
-                <img src="./assets/css3-icon.svg" alt="" />
+                <figure><img src="./assets/css3-icon.svg" alt="" /></figure>
                 <p>Responsive CSS</p>
               </li>
               <li>
-                <img src="./assets/js-icon.svg" alt="" />
+                <figure><img src="./assets/js-icon.svg" alt="" /></figure>
                 <p>Javascript</p>
               </li>
             </ul>
           </div>
           <div class="card-list">
-            <h3>Frameworks</h3>
+            <h3>+ Frameworks</h3>
             <ul>
               <li>
-                <img src="./assets/react-icon-light.svg" alt="" />
+                <figure>
+                  <img src="./assets/react-icon-light.svg" alt="" />
+                </figure>
                 <p>React</p>
-              </li>
-            </ul>
-          </div>
-          <div class="card-list">
-            <h3>Other Tech</h3>
-            <ul>
-              <li>
-                <img src="./assets/git-icon.svg" alt="" />
-                <p>Git</p>
-              </li>
-              <li>
-                <img src="./assets/github-icon-light.png" alt="" />
-                <p>Github</p>
               </li>
             </ul>
           </div>
         </article>
         <article class="card">
-          <div class="card-title">
-            <img src="./assets/backend-icon.svg" alt="" />
-            <h2>Back-end Development</h2>
+          <div class="card-header">
+            <div class="card-title">
+              <figure><img src="./assets/backend-icon.svg" alt="" /></figure>
+              <h2>Back-end Development</h2>
+            </div>
+            <p>I am still learning the server side of web.</p>
           </div>
-          <p>I am still learning the server side of web.</p>
           <div class="card-list">
-            <h3>Currently learning:</h3>
+            <h3>Currently learning</h3>
             <ul>
               <li>
-                <img src="./assets/python-icon.svg" alt="" />
+                <figure>
+                  <img src="./assets/python-icon.svg" alt="" />
+                </figure>
                 <p>Python</p>
               </li>
               <li>
-                <img src="./assets/postgresql-icon-light.svg" alt="" />
+                <figure>
+                  <img src="./assets/postgresql-icon-light.svg" alt="" />
+                </figure>
                 <p>Postgresql</p>
               </li>
               <li>
-                <img src="./assets/aws-icon-light.svg" alt="" />
+                <figure>
+                  <img src="./assets/aws-icon-light.svg" alt="" />
+                </figure>
                 <p>AWS</p>
+              </li>
+            </ul>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-header">
+            <div class="card-title">
+              <figure><img src="./assets/frontend-icon.svg" alt="" /></figure>
+              <h2>Tool I Use</h2>
+            </div>
+            <p>
+              Coding from empty document gives you more flexbility and
+              customizations
+            </p>
+          </div>
+          <div class="card-list">
+            <!-- <h3>Other Tech</h3> -->
+            <ul>
+              <li>
+                <figure>
+                  <img src="./assets/vscode-icon.svg" alt="" />
+                </figure>
+                <p>VS Code</p>
+              </li>
+              <li>
+                <figure><img src="./assets/git-icon.svg" alt="" /></figure>
+                <p>Git</p>
+              </li>
+              <li>
+                <figure>
+                  <img src="./assets/github-icon-light.png" alt="" />
+                </figure>
+                <p>Github</p>
+              </li>
+              <li>
+                <figure>
+                  <img src="./assets/docker-icon.svg" alt="" />
+                </figure>
+                <p>Docker</p>
               </li>
             </ul>
           </div>
