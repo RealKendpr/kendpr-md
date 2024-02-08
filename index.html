@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
     <title>Kendpr Markdown</title>
@@ -20,9 +20,15 @@
   <body>
     <nav>
       <div>
-        <a name="Kendpr's Logo" id="top-logo" href="#"
-          ><img src="./assets/logo-is_dark.svg" alt=""
-        /></a>
+        <a name="Kendpr's Logo" id="top-logo" href="#">
+          <picture>
+            <source
+              srcset="./assets/logo-is_light.svg"
+              media="(prefers-color-scheme: dark)"
+            />
+            <img src="./assets/logo-is_dark.svg" alt="" />
+          </picture>
+        </a>
         <button class="menu-button open-button">🥞</button>
       </div>
     </nav>
@@ -36,7 +42,16 @@
       </ul>
       <ul class="social-list">
         <li>
-          <a href="#"><img src="./assets/github-icon-light.png" alt="" /></a>
+          <a href="#">
+            <picture
+              >
+              <source
+                srcset="./assets/github-icon-dark.svg"
+                media="(prefers-color-scheme: dark)"
+              />
+              <img src="./assets/github-icon-light.svg" alt="" />
+            </picture>
+          </a>
         </li>
         <li>
           <a href="#"><img src="./assets/linkedin-icon.svg" alt="" /></a>
@@ -75,7 +90,15 @@
           <article class="card">
             <div class="card-header">
               <div class="card-title">
-                <figure><img src="./assets/front.svg" alt="" /></figure>
+                <figure>
+                  <picture>
+                    <source
+                      srcset="./assets/front-icon-dark.svg"
+                      media="(prefers-color-scheme: dark)"
+                    />
+                    <img src="./assets/front-icon-light.svg" alt="" />
+                  </picture>
+                </figure>
                 <h2>Front-end Development</h2>
               </div>
               <p>
@@ -105,7 +128,7 @@
               <ul>
                 <li>
                   <figure>
-                    <img src="./assets/react-icon-light.svg" alt="" />
+                    <img src="./assets/react-icon.svg" alt="" />
                   </figure>
                   <p>React</p>
                 </li>
@@ -115,7 +138,15 @@
           <article class="card">
             <div class="card-header">
               <div class="card-title">
-                <figure><img src="./assets/backend-icon.svg" alt="" /></figure>
+                <figure>
+                  <picture>
+                    <source
+                      srcset="./assets/backend-icon-light.svg"
+                      media="(prefers-color-scheme: dark)"
+                    />
+                    <img src="./assets/backend-icon.svg" alt="" />
+                  </picture>
+                </figure>
                 <h2>Back-end Development</h2>
               </div>
               <p>I am still learning the server side of web.</p>
@@ -137,7 +168,13 @@
                 </li>
                 <li>
                   <figure>
-                    <img src="./assets/aws-icon-light.svg" alt="" />
+                    <picture>
+                      <source
+                        srcset="./assets/aws-icon-dark.svg"
+                        media="(prefers-color-scheme: dark)"
+                      />
+                      <img src="./assets/aws-icon-light.svg" alt="" />
+                    </picture>
                   </figure>
                   <p>AWS (Amazon Web Services)</p>
                 </li>
@@ -147,7 +184,15 @@
           <article class="card">
             <div class="card-header">
               <div class="card-title">
-                <figure><img src="./assets/tools-icon.svg" alt="" /></figure>
+                <figure>
+                  <picture>
+                    <source
+                      srcset="./assets/tools-icon-dark.svg"
+                      media="(prefers-color-scheme: dark)"
+                    />
+                    <img src="./assets/tools-icon-light.svg" alt="" />
+                  </picture>
+                </figure>
                 <h2>Tools that I Use</h2>
               </div>
               <p>
@@ -170,7 +215,13 @@
                 </li>
                 <li>
                   <figure>
-                    <img src="./assets/github-icon-light.png" alt="" />
+                    <picture>
+                      <source
+                        srcset="./assets/github-icon-dark.svg"
+                        media="(prefers-color-scheme: dark)"
+                      />
+                      <img src="./assets/github-icon-light.svg" alt="" />
+                    </picture>
                   </figure>
                   <p>Github</p>
                 </li>
@@ -222,12 +273,23 @@
       </main>
       <footer>
         <div>
-          <img src="./assets/logo-is_dark.svg" alt="" id="footer-logo" />
+          <picture>
+            <source
+              srcset="./assets/logo-is_light.svg"
+              media="(prefers-color-scheme: dark)"
+            />
+            <img src="./assets/logo-is_dark.svg" alt="" id="footer-logo" />
+          </picture>
           <ul class="social-list">
             <li>
-              <a href="#"
-                ><img src="./assets/github-icon-light.png" alt=""
-              /></a>
+              <a href="#">
+                <picture>
+                  <source
+                    srcset="./assets/github-icon-dark.svg"
+                    media="(prefers-color-scheme: dark)"
+                  />
+                  <img src="./assets/github-icon-light.svg" alt="" /> </picture
+              ></a>
             </li>
             <li>
               <a href="#"><img src="./assets/linkedin-icon.svg" alt="" /></a>

@@ -15,6 +15,7 @@
 body {
   min-height: 100svh;
   min-height: 100vh;
+  background: var(--color-100);
 }
 img,
 svg,
@@ -29,27 +30,43 @@ h1,
 h2,
 h3 {
   font-family: var(--font);
+  color: var(--color-900);
 }
 p {
   max-width: 40ch;
   font-size: 0.9375rem;
   font-family: var(--font);
   line-height: 1.5;
+  color: var(--color-800);
 }
 a {
   font-size: 0.9375rem;
   font-family: var(--font);
   text-decoration: none;
+  color: var(--color-900);
+
+  &:hover {
+    color: var(--color-accent);
+    text-decoration: underline;
+  }
 }
 :root {
+  --color-accent: #007aac;
+  --color-100: #fafafa;
+  --color-200: #f5f5f5;
+  --color-300: #ececec;
+  --color-400: #d0d0d0;
+  --color-800: #2d2d30;
+  --color-900: #1e1e1e;
+
   --font: "Inter", sans-serif;
 }
 nav {
   z-index: 98;
   position: fixed;
   width: 100%;
-  background: lightblue;
-  border-bottom: 1px solid grey;
+  background: var(--color-200);
+  border-bottom: 1px solid var(--color-400);
 
   & > div {
     padding: 8px 2%;
@@ -64,7 +81,7 @@ nav {
   padding-inline: clamp(16px, 5%, 32px);
   max-width: 500px;
   border-radius: 1rem;
-  border: 1px solid grey;
+  border: 1px solid var(--color-400);
 }
 #top-logo,
 #footer-logo {
@@ -94,8 +111,8 @@ nav {
   padding: 1rem;
   width: 70%;
   border-radius: 1rem;
-  border: 1px solid grey;
-  background: lightgray;
+  border: 1px solid var(--color-400);
+  background: var(--color-300);
 
   visibility: hidden;
   opacity: 0;
@@ -115,12 +132,21 @@ nav {
   gap: 5px;
 }
 .social-list {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   display: flex;
-  gap: 10px;
+  gap: 15px;
 
   & li {
     width: 32px;
+    transition: all 150ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &:active {
+      transform: scale(0.8);
+    }
   }
 }
 header {
@@ -132,7 +158,10 @@ header {
   & h1 {
     font-size: 2rem;
     font-weight: 700;
-    font-family: var(--font);
+
+    &:hover {
+      color: var(--color-accent);
+    }
   }
 
   /* &::after {
@@ -164,7 +193,7 @@ main {
   padding: 32px 0 64px;
   display: grid;
   gap: 2rem;
-  border-top: 1px solid grey;
+  border-top: 1px solid var(--color-400);
 }
 .about {
   & h2 {
@@ -184,8 +213,8 @@ main {
   gap: 1.5rem;
   padding: 2rem 1.5rem;
   border-radius: 1rem;
-  border: 1px solid grey;
-  background: hsla(0, 0%, 83%, 0.5);
+  border: 1px solid var(--color-400);
+  background: var(--color-200);
 }
 .card-header {
   display: grid;
@@ -219,7 +248,7 @@ main {
     width: 90%;
     height: 1px;
     display: block;
-    background: hsl(0, 0%, 53%);
+    background: var(--color-400);
   }
 }
 .card-list {
@@ -258,7 +287,7 @@ main {
       width: 90%;
       height: 1px;
       display: block;
-      background: hsl(0, 0%, 53%);
+      background: var(--color-400);
     }
   }
   & div {
@@ -273,9 +302,9 @@ main {
 }
 .work-card {
   padding-bottom: 24px;
-  border: 1px solid grey;
+  border: 1px solid var(--color-400);
   border-radius: 1rem;
-  background: hsla(0, 0%, 83%, 0.5);
+  background: var(--color-200);
   overflow: hidden;
 
   & h3 {
@@ -306,17 +335,22 @@ main {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: hsla(0, 0%, 53%, 0.5);
+  background: hsla(0, 0%, 93%, 0.5);
   opacity: 0;
   visibility: hidden;
   transition: all 100ms ease-in-out;
+
+  & a {
+    font-size: 1rem;
+    font-weight: 500;
+  }
 }
 
 footer {
   padding: 32px 0;
   display: grid;
-  gap: 1rem;
-  border-top: 1px solid grey;
+  gap: 1.5rem;
+  border-top: 1px solid var(--color-400);
 }
 @media (width >= 500px) {
   nav > div {
@@ -328,5 +362,28 @@ footer {
   }
   .wrapper {
     margin-bottom: 50px;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* FROM DARK TO LIGHT COLORS; */
+    --color-100: #1e1e1e;
+    --color-200: #252526;
+    /* --color-300: #ececec; */
+    --color-400: #3e3e42;
+    --color-800: #d0d0d0;
+    --color-900: #e1e1e1;
+  }
+
+  .menu {
+    background: var(--color-200);
+  }
+
+  .work-link {
+    background: hsla(240, 3%, 25%, 0.5);
+
+    & a:hover {
+      color: var(--color-900);
+    }
   }
 }
