@@ -45,7 +45,7 @@ a {
   --font: "Inter", sans-serif;
 }
 nav {
-  z-index: 100;
+  z-index: 98;
   position: fixed;
   width: 100%;
   background: lightblue;
@@ -59,6 +59,7 @@ nav {
   }
 }
 .wrapper {
+  position: relative;
   margin: 0 2% 32px;
   padding-inline: clamp(16px, 5%, 32px);
   max-width: 500px;
@@ -70,14 +71,62 @@ nav {
   display: block;
   width: 32px;
 }
-.menu button {
+.menu-button {
   border: 0;
   background: transparent;
   font-size: 1.5rem;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
-.menu-list {
-  position: absolute;
-  right: 100%;
+.menu {
+  z-index: 100;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  width: 70%;
+  border-radius: 1rem;
+  border: 1px solid grey;
+  background: lightgray;
+
+  visibility: hidden;
+  opacity: 0;
+  & > div {
+    text-align: right;
+  }
+}
+.menu.active,
+.void.active {
+  visibility: visible;
+  opacity: 1;
+}
+.nav-links {
+  display: grid;
+  gap: 5px;
+}
+.social-list {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 10px;
+
+  & li {
+    width: 32px;
+  }
+}
+.void {
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+  background: hsla(0, 0%, 50%, 0.2);
+
+  visibility: hidden;
+  opacity: 0;
 }
 header {
   height: 100vh;
@@ -90,6 +139,19 @@ header {
     font-weight: 700;
     font-family: var(--font);
   }
+
+  /* &::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100svh;
+    opacity: .1;
+    background: url(./assets/video.gif);
+    background-repeat: no-repeat;
+  } */
 }
 #profile-img {
   width: 300px;
@@ -110,7 +172,6 @@ main {
   border-top: 1px solid grey;
 }
 .about {
-
   & h2 {
     font-size: 1.1rem;
     font-weight: 700;
@@ -240,14 +301,20 @@ main {
   border-top-right-radius: 0.5rem;
   overflow: hidden; */
 
-  & .work-link {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: hsla(0, 0%, 53%, 0.5);
-    opacity: 0;
-    visibility: hidden;
+  &:hover .work-link {
+    opacity: 100;
+    visibility: visible;
   }
+}
+
+.work-link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: hsla(0, 0%, 53%, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 100ms ease-in-out;
 }
 
 footer {
@@ -255,15 +322,6 @@ footer {
   display: grid;
   gap: 1rem;
   border-top: 1px solid grey;
-}
-.footer-social {
-  margin-top: 0.5rem;
-  display: flex;
-  gap: 10px;
-
-  & li {
-    width: 32px;
-  }
 }
 @media (width >= 500px) {
   nav > div {
