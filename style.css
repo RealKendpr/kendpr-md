@@ -48,14 +48,20 @@ nav {
   z-index: 100;
   position: fixed;
   width: 100%;
-  padding: 8px 5%;
-  display: flex;
-  justify-content: space-between;
   background: lightblue;
+  border-bottom: 1px solid grey;
+
+  & > div {
+    padding: 8px 2%;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 .wrapper {
-  margin: 0 5% 16px;
-  padding-inline: 10px;
+  margin: 0 2% 32px;
+  padding-inline: clamp(16px, 5%, 32px);
+  max-width: 500px;
   border-radius: 1rem;
   border: 1px solid grey;
 }
@@ -74,6 +80,7 @@ nav {
   right: 100%;
 }
 header {
+  height: 100vh;
   height: 100svh;
   display: grid;
   align-items: center;
@@ -85,13 +92,15 @@ header {
   }
 }
 #profile-img {
-  width: 125px;
-  height: 125px;
+  width: 300px;
+  height: 300px;
   border-radius: 1rem;
   overflow: hidden;
 
   & img {
-    object-fit: cover;
+    object-fit: contain;
+    object-position: left;
+    height: 100%;
   }
 }
 main {
@@ -101,6 +110,7 @@ main {
   border-top: 1px solid grey;
 }
 .about {
+
   & h2 {
     font-size: 1.1rem;
     font-weight: 700;
@@ -253,5 +263,17 @@ footer {
 
   & li {
     width: 32px;
+  }
+}
+@media (width >= 500px) {
+  nav > div {
+    padding-inline: 0;
+  }
+  nav > div,
+  .wrapper {
+    margin: auto;
+  }
+  .wrapper {
+    margin-bottom: 50px;
   }
 }
