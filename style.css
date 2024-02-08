@@ -53,6 +53,12 @@ nav {
   justify-content: space-between;
   background: lightblue;
 }
+.wrapper {
+  margin: 0 5% 16px;
+  padding-inline: 10px;
+  border-radius: 1rem;
+  border: 1px solid grey;
+}
 #top-logo,
 #footer-logo {
   display: block;
@@ -68,7 +74,6 @@ nav {
   right: 100%;
 }
 header {
-  padding-inline: 5%;
   height: 100svh;
   display: grid;
   align-items: center;
@@ -90,9 +95,10 @@ header {
   }
 }
 main {
-  padding: 32px 5%;
+  padding: 32px 0 64px;
   display: grid;
   gap: 2rem;
+  border-top: 1px solid grey;
 }
 .about {
   & h2 {
@@ -112,7 +118,8 @@ main {
   gap: 1.5rem;
   padding: 2rem 1.5rem;
   border-radius: 1rem;
-  background: lightgrey;
+  border: 1px solid grey;
+  background: hsla(0, 0%, 83%, 0.5);
 }
 .card-header {
   display: grid;
@@ -123,6 +130,7 @@ main {
   }
 }
 .card-title {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -136,6 +144,16 @@ main {
     font-size: 1.2rem;
     font-weight: 700;
     font-family: var(--font);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -12%;
+    width: 90%;
+    height: 1px;
+    display: block;
+    background: hsl(0, 0%, 53%);
   }
 }
 .card-list {
@@ -162,9 +180,20 @@ main {
 
 .works {
   & h2 {
+    position: relative;
     margin-bottom: 1.5rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 700;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -15%;
+      width: 90%;
+      height: 1px;
+      display: block;
+      background: hsl(0, 0%, 53%);
+    }
   }
   & div {
     display: grid;
@@ -176,9 +205,30 @@ main {
   display: grid;
   place-items: center;
 }
+.work-card {
+  padding-bottom: 24px;
+  border: 1px solid grey;
+  border-radius: 1rem;
+  background: hsla(0, 0%, 83%, 0.5);
+  overflow: hidden;
+
+  & h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: var(--font);
+  }
+
+  & figcaption {
+    padding-inline: 24px;
+  }
+}
 .work-img {
   position: relative;
   margin-bottom: 1rem;
+  /* border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  overflow: hidden; */
 
   & .work-link {
     position: absolute;
@@ -189,22 +239,18 @@ main {
     visibility: hidden;
   }
 }
-.work-card h3 {
-  margin-bottom: 0.5rem;
-  font-size: 1rem;
-  font-weight: 700;
-  font-family: var(--font);
-}
 
 footer {
-  padding: 32px 5%;
+  padding: 32px 0;
   display: grid;
   gap: 1rem;
+  border-top: 1px solid grey;
 }
 .footer-social {
   margin-top: 0.5rem;
   display: flex;
   gap: 10px;
+
   & li {
     width: 32px;
   }
