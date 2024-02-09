@@ -37,12 +37,13 @@ menu.addEventListener("click", (event) => {
   }
 });
 
-const overlay = document.getElementsByClassName("overlay")[0];
+const lightFx = document.getElementsByClassName("light-effect")[0];
+const codeWrapper = document.getElementById("code-wrapper");
 
-overlay.addEventListener("mousemove", (e) => {
-  let x = e.pageX - overlay.offsetLeft;
-  let y = e.pageY - overlay.offsetTop;
+codeWrapper.addEventListener("mousemove", (e) => {
+  const height = lightFx.offsetHeight;
+  const width = lightFx.offsetWidth;
 
-  overlay.style.setProperty("--x", x + `px`);
-  overlay.style.setProperty("--y", y + `px`);
+  lightFx.style.left = `${e.pageX - width / 2 + 10}px`;
+  lightFx.style.top = `${e.pageY - height / 2 - 20}px`;
 });
