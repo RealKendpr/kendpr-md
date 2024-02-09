@@ -47,7 +47,7 @@ a {
 
   &:hover {
     color: var(--color-accent);
-      text-decoration: underline;
+    text-decoration: underline;
   }
   &:focus-visible {
     color: var(--color-accent);
@@ -86,6 +86,7 @@ nav {
   max-width: 500px;
   border-radius: 1rem;
   border: 1px solid var(--color-400);
+  overflow: hidden;
 }
 #top-logo,
 #footer-logo {
@@ -171,6 +172,7 @@ header {
   align-items: center;
 
   & h1 {
+    display: inline;
     font-size: 2rem;
     font-weight: 700;
 
@@ -224,12 +226,49 @@ main {
   gap: 1.5rem;
 }
 .card {
+  position: relative;
   display: grid;
   gap: 1.5rem;
   padding: 2rem 1.5rem;
   border-radius: 1rem;
   border: 1px solid var(--color-400);
   background: var(--color-200);
+}
+.card:hover::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  z-index: -1;
+
+  width: calc(100% + 5px);
+  height: calc(100% + 5px);
+  border-radius: 1rem;
+  background: var(--color-accent);
+  filter: blur(1px);
+
+  animation: border 2s cubic-bezier(0.46, 0.03, 0.52, 0.96) infinite;
+}
+@keyframes border {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.25;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.25;
+  }
 }
 .card-header {
   display: grid;
