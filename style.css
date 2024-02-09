@@ -442,41 +442,69 @@ footer {
   }
 
   @media (width >= 700px) {
+    body {
+      overflow-x: hidden;
+    }
     #code-wrapper {
       position: fixed;
       display: block;
       width: 100%;
-      min-height: 100svh;
+      max-height: 100svh;
       cursor: url(./assets/torch-cursor.gif), auto;
       transition: 0.5s, top 0s, left 0s;
     }
     .code {
       z-index: -2;
-      color: hsl(0, 0%, 13%);
+      display: grid;
+      grid-template-columns: 1fr 500px 1fr;
+      padding-inline: 1rem;
+      user-select: none;
       -webkit-touch-callout: none;
       -webkit-user-select: none;
       -khtml-user-select: none;
       -moz-user-select: none;
-      user-select: none;
-      animation: scrolling 20s linear infinite;
+
+      & pre {
+        tab-size: 2;
+        white-space: pre-wrap;
+      }
+
+      & code {
+        background: transparent !important;
+        font-family: "Noto Sans Mono", monospace;
+        font-size: 13px;
+        color: var(--color-100);
+      }
+    }
+    .code-block {
+      padding-inline: 1rem;
+      animation: scrolling 90s linear infinite;
+
+      &:first-child {
+        animation-delay: 2s;
+      }
+
+      &:last-child {
+        animation-delay: 1s;
+      }
     }
     .light-effect {
       z-index: -3;
       position: absolute;
-      width: 100px;
-      height: 100px;
+      width: 150px;
+      height: 150px;
       background: linear-gradient(-45deg, red, orange);
-      border-radius: 100px 100px 0 100px;
+      border-radius: 150px 150px 0 150px;
       transform: rotate(-145deg);
       filter: blur(10px);
-      box-shadow: 17px 20px 90px #700;
+      box-shadow: 20px 30px 100px #700;
       opacity: 0;
 
       &::after,
       &::before {
         content: "";
-        width: 100;
-        height: 100px;
+        width: 150px;
+        height: 150px;
         display: block;
         position: absolute;
         background: linear-gradient(-45deg, red, orange);
@@ -506,8 +534,8 @@ footer {
       0% {
         transform: translateY(0) scale (1);
         filter: opacity(0.5);
-        height: 100px;
-        width: 100px;
+        width: 150px;
+        height: 150px;
         /* opacity: 0.5; */
       }
       25% {
@@ -515,12 +543,12 @@ footer {
         filter: opacity(0.7);
       }
       50% {
-        height: 90px;
-        width: 90px;
+        height: 130px;
+        width: 120px;
       }
       100% {
-        height: 90px;
-        width: 90px;
+        height: 140px;
+        width: 140px;
         /* opacity: 0.4; */
         transform: translateY(-10em) scale (0);
         filter: opacity(0.4);
@@ -528,7 +556,7 @@ footer {
     }
     @media (prefers-reduced-motion: reduce) {
       .code {
-        animation-duration: 90s;
+        animation-duration: 180s;
       }
       .light-effect {
         &::after,
