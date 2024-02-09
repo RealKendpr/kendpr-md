@@ -87,6 +87,7 @@ nav {
   border-radius: 1rem;
   border: 1px solid var(--color-400);
   overflow: hidden;
+  background: var(--color-100);
 }
 #top-logo,
 #footer-logo {
@@ -122,8 +123,9 @@ nav {
   transform: translate(-50%, -50%) scale(0);
   display: flex;
   flex-direction: column-reverse;
-  padding: 1rem;
+  padding: 1rem clamp(16px, 5%, 32px);
   width: 70%;
+  max-width: 500px;
   border-radius: 1rem;
   border: 1px solid var(--color-400);
   background: var(--color-300);
@@ -406,6 +408,10 @@ footer {
   gap: 1.5rem;
   border-top: 1px solid var(--color-400);
 }
+#code-wrapper {
+  display: none;
+}
+
 @media (width >= 500px) {
   nav > div {
     padding-inline: 0;
@@ -438,6 +444,82 @@ footer {
 
     & a:hover {
       color: var(--color-900);
+    }
+  }
+
+  @media (width >= 700px) {
+    #code-wrapper {
+      position: relative;
+      display: block;
+      position: fixed;
+    }
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100svh;
+      background: transparent;
+      cursor: url(./assets/torch-cursor.gif), auto;
+
+      &::before {
+        content: "";
+        z-index: -3;
+        position: absolute;
+        left: var(--x);
+        top: calc(var(--y) - 20px);
+        transform: translate(-50%, -50%);
+        width: 100px;
+        height: 125px;
+        border-radius: 100px;
+        opacity: 0;
+        background: radial-gradient(
+          var(--color-900),
+          hsla(32, 100%, 62%, 0.351),
+          transparent
+        );
+        filter: blur(5px);
+        transition: 0.5s, top 0s, left 0s;
+      }
+    }
+    .overlay:hover::before {
+      opacity: 1;
+      animation: torch-effect 1s linear infinite;
+    }
+    @keyframes torch-effect {
+      0% {
+        opacity: 0.8;
+      }
+      20% {
+        opacity: 0.5;
+      }
+      50% {
+        opacity: 0.7;
+      }
+      75% {
+        opacity: 0.9;
+      }
+      90% {
+        opacity: 0.3;
+      }
+      100% {
+        opacity: 0.2;
+      }
+    }
+    .inner-scroller {
+      animation: scrolling 20s linear infinite;
+    }
+    @keyframes scrolling {
+      to {
+        transform: translateY(-100%);
+      }
+    }
+    .code {
+      z-index: -2;
+      color: hsl(0, 0%, 13%);
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
     }
   }
 }

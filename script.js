@@ -36,3 +36,13 @@ menu.addEventListener("click", (event) => {
     closeMenu();
   }
 });
+
+const overlay = document.getElementsByClassName("overlay")[0];
+
+overlay.addEventListener("mousemove", (e) => {
+  let x = e.pageX - overlay.offsetLeft;
+  let y = e.pageY - overlay.offsetTop;
+
+  overlay.style.setProperty("--x", x + `px`);
+  overlay.style.setProperty("--y", y + `px`);
+});
