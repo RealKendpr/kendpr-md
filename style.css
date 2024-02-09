@@ -464,43 +464,80 @@ footer {
       z-index: -3;
       position: absolute;
       width: 100px;
-      height: 125px;
-      border-radius: 100px;
+      height: 100px;
+      background: linear-gradient(-45deg, red, orange);
+      border-radius: 100px 100px 0 100px;
+      transform: rotate(-145deg);
+      filter: blur(10px);
+      box-shadow: 17px 20px 90px #700;
       opacity: 0;
-      background: radial-gradient(
-        var(--color-900),
-        hsla(32, 100%, 62%, 0.351),
-        transparent
-      );
-      filter: blur(5px);
+
+      &::after,
+      &::before {
+        content: "";
+        width: 100;
+        height: 100px;
+        display: block;
+        position: absolute;
+        background: linear-gradient(-45deg, red, orange);
+        transform: scale(0.8) rotate(20deg);
+        border-radius: 100px 100px 0px 100px;
+        top: 20px;
+        mix-blend-mode: screen;
+        animation: 1.1s flame infinite;
+      }
+
+      &:before {
+        top: 0;
+        animation-duration: 0.1s;
+        transform: scale(0.9) rotate(-15deg) translate(10px, 0px);
+      }
     }
     #code-wrapper:hover + .light-effect {
       opacity: 1;
-      animation: torch-effect 1s linear infinite;
+      animation: flame 1.5s ease-in infinite;
     }
     @keyframes scrolling {
       to {
         transform: translateY(-100%);
       }
     }
-    @keyframes torch-effect {
+    @keyframes flame {
       0% {
-        opacity: 0.8;
+        transform: translateY(0) scale (1);
+        filter: opacity(0.5);
+        height: 100px;
+        width: 100px;
+        /* opacity: 0.5; */
       }
-      20% {
-        opacity: 0.5;
+      25% {
+        /* opacity: 0.7; */
+        filter: opacity(0.7);
       }
       50% {
-        opacity: 0.7;
-      }
-      75% {
-        opacity: 0.9;
-      }
-      90% {
-        opacity: 0.3;
+        height: 90px;
+        width: 90px;
       }
       100% {
-        opacity: 0.2;
+        height: 90px;
+        width: 90px;
+        /* opacity: 0.4; */
+        transform: translateY(-10em) scale (0);
+        filter: opacity(0.4);
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .code {
+        animation-duration: 90s;
+      }
+      .light-effect {
+        &::after,
+        &::before {
+          animation: none !important;
+        }
+      }
+      #code-wrapper:hover + .light-effect {
+        animation: none !important;
       }
     }
   }
