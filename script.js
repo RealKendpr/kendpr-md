@@ -47,3 +47,30 @@ codeWrapper.addEventListener("mousemove", (e) => {
   lightFx.style.left = `${e.pageX - width / 2 + 10}px`;
   lightFx.style.top = `${e.pageY - height / 2 - 20}px`;
 });
+
+const cssBlock = document.getElementById("css-block");
+const jsBlock = document.getElementById("js-block");
+const htmlBlock = document.getElementById("html-block");
+
+// let cssContent;
+// let jsContent;
+// let htmlContent;
+
+fetch("./style.css")
+  .then((response) => response.text())
+  .then((textString) => {
+    cssBlock.innerText = textString.repeat(2);
+    // cssContent = textString;
+  });
+
+fetch("./script.js")
+  .then((response) => response.text())
+  .then((textString) => {
+    jsBlock.innerText = textString.repeat(4);
+  });
+
+fetch("./index.html")
+  .then((response) => response.text())
+  .then((textString) => {
+    htmlBlock.innerText = textString.repeat(2);
+  });

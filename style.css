@@ -456,7 +456,8 @@ footer {
     .code {
       z-index: -2;
       display: grid;
-      grid-template-columns: 1fr 500px 1fr;
+      --size: calc((100% - 500px) / 2);
+      grid-template-columns: var(--size) 500px var(--size);
       padding-inline: 1rem;
       user-select: none;
       -webkit-touch-callout: none;
@@ -466,11 +467,11 @@ footer {
 
       & pre {
         tab-size: 2;
-        white-space: pre-wrap;
+        /* white-space: pre-wrap; */
       }
 
       & code {
-        background: transparent !important;
+        /* background: transparent !important; */
         font-family: "Noto Sans Mono", monospace;
         font-size: 13px;
         color: var(--color-100);
