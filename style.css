@@ -1,11 +1,10 @@
-/* font-family: 'Inter', sans-serif; */
-/* html {
-  color-scheme: dark light;
-} */
 * {
   padding: 0;
   margin: 0;
   font: inherit;
+}
+html {
+  color-scheme: dark light;
 }
 *,
 *::before,
@@ -340,7 +339,7 @@ main {
       background: var(--color-400);
     }
   }
-  & div {
+  & > div {
     display: grid;
     gap: 1.5rem;
   }
@@ -350,8 +349,8 @@ main {
   display: grid;
   place-items: center;
 }
-.work-card {
-  padding-bottom: 24px;
+figure.work-card {
+  /* padding-bottom: 24px; */
   border: 1px solid var(--color-400);
   border-radius: 1rem;
   background: var(--color-200);
@@ -370,13 +369,11 @@ main {
 }
 .work-img {
   position: relative;
-  margin-bottom: 1rem;
-  /* border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
-  overflow: hidden; */
+  /* margin-bottom: 1rem; */
+  overflow: hidden;
 
   &:hover .work-link {
-    opacity: 100;
+    opacity: 1;
     visibility: visible;
   }
 }
@@ -385,14 +382,24 @@ main {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: hsla(0, 0%, 93%, 0.5);
   opacity: 0;
   visibility: hidden;
   transition: all 100ms ease-in-out;
 
   & a {
+    z-index: 2;
     font-size: 1rem;
     font-weight: 500;
+  }
+
+  &::after {
+    z-index: 1;
+    content: "";
+    position: absolute;
+    background: hsla(240, 2%, 18%, 0.1);
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
   }
 }
 
@@ -464,18 +471,6 @@ footer {
       -webkit-user-select: none;
       -khtml-user-select: none;
       -moz-user-select: none;
-
-      & pre {
-        tab-size: 2;
-        /* white-space: pre-wrap; */
-      }
-
-      & code {
-        /* background: transparent !important; */
-        font-family: "Noto Sans Mono", monospace;
-        font-size: 13px;
-        color: var(--color-100);
-      }
     }
     .code-block {
       padding-inline: 1rem;
@@ -487,6 +482,17 @@ footer {
 
       &:last-child {
         animation-delay: 1s;
+      }
+      & pre {
+        tab-size: 2;
+        /* white-space: pre-wrap; */
+      }
+      & code {
+        /* background: transparent !important; */
+        font-family: "Noto Sans Mono", monospace;
+        font-size: 13px;
+        color: var(--color-100);
+        overflow: hidden;
       }
     }
     .light-effect {

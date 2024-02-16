@@ -49,17 +49,17 @@
             <img src="./assets/logo-is_dark.svg" alt="" />
           </picture>
         </a>
-        <button class="menu-button open-button">🥞</button>
+        <button class="menu-button open-button">&#129386;</button>
       </div>
       <dialog class="menu">
         <div>
           <ul class="nav-links">
-            <li><a href="#">About Me</a></li>
-            <li><a href="#">Work</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#works">Works</a></li>
           </ul>
           <ul class="social-list">
             <li>
-              <a href="#">
+              <a href="https://github.com/RealKendpr">
                 <picture>
                   <source
                     srcset="./assets/github-icon-dark.svg"
@@ -70,15 +70,19 @@
               </a>
             </li>
             <li>
-              <a href="#"><img src="./assets/linkedin-icon.svg" alt="" /></a>
+              <a href="https://www.linkedin.com/in/kendpr/"
+                ><img src="./assets/linkedin-icon.svg" alt=""
+              /></a>
             </li>
             <li>
-              <a href="#"><img src="./assets/fiverr-icon.svg" alt="" /></a>
+              <a href="https://www.fiverr.com/kendpr"
+                ><img src="./assets/fiverr-icon.svg" alt=""
+              /></a>
             </li>
           </ul>
         </div>
         <div>
-          <button class="menu-button">❌</button>
+          <button class="menu-button">&#10060;</button>
         </div>
       </dialog>
     </nav>
@@ -95,7 +99,7 @@
         </figure>
       </header>
       <main>
-        <section class="about">
+        <section id="about" class="about">
           <h2>My name is Ken.</h2>
           <p>
             I am a front-end web developer, my goal is to make websites and
@@ -104,7 +108,8 @@
           </p>
           <p>
             I have not yet discovered the whole web development, but I am
-            constantly learning to improve my skills.
+            constantly learning to improve my front-end development knowledge
+            and the web as a whole.
           </p>
         </section>
         <div class="skills">
@@ -149,7 +154,8 @@
               </ul>
             </div>
             <div class="card-list">
-              <h3>+ Frameworks</h3>
+              <!-- <h3>+ Frameworks</h3> -->
+              <h3>Learning</h3>
               <ul>
                 <li>
                   <figure>
@@ -221,12 +227,11 @@
                 <h2>Tools that I Use</h2>
               </div>
               <p>
-                Coding from empty document gives you more flexbility and
-                customizations
+                These tools helps me with development, and maintaining my
+                projects.
               </p>
             </div>
             <div class="card-list">
-              <!-- <h3>Other Tech</h3> -->
               <ul>
                 <li>
                   <figure>
@@ -260,38 +265,59 @@
             </div>
           </article>
         </div>
-        <div class="works">
+        <div id="works" class="works">
           <h2>My Works</h2>
           <div>
             <figure class="work-card">
               <div class="work-img">
-                <img src="./assets/image-temp.jpg" alt="" />
+                <img src="./assets/news-homepage-challenge.jpeg" alt="" />
                 <div class="work-link">
-                  <a href="#">Visit Site</a>
+                  <a href="https://realkendpr.github.io/news-homepage-challene/"
+                    >Visit Site</a
+                  >
                 </div>
               </div>
-              <figcaption>
-                <h3>Lorem ipsum dolor sit.</h3>
+              <!-- <figcaption>
+                <h3>News Home Page</h3>
                 <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Repellendus, iusto?
+                 This page is mostly made with grids.
                 </p>
-              </figcaption>
+              </figcaption> -->
             </figure>
             <figure class="work-card">
               <div class="work-img">
-                <img src="./assets/image-temp.jpg" alt="" />
+                <img src="./assets/huddle-landing-page.jpeg" alt="" />
                 <div class="work-link">
-                  <a href="#">Visit Site</a>
+                  <a
+                    href="https://realkendpr.github.io/huddle-full-landing-page/"
+                    >Visit Site</a
+                  >
                 </div>
               </div>
-              <figcaption>
+              <!-- <figcaption>
                 <h3>Lorem ipsum dolor sit.</h3>
                 <p>
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Repellendus, iusto?
                 </p>
-              </figcaption>
+              </figcaption> -->
+            </figure>
+            <figure class="work-card">
+              <div class="work-img">
+                <img src="./assets/clipboard-landing-page.jpeg" alt="" />
+                <div class="work-link">
+                  <a href="https://realkendpr.github.io/clipboard-landing-page/"
+                    >Visit Site</a
+                  >
+                </div>
+              </div>
+              <!-- <figcaption>
+                <h3>Lorem ipsum dolor sit.</h3>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Repellendus, iusto?
+                </p>
+              </figcaption> -->
             </figure>
           </div>
         </div>
@@ -307,7 +333,7 @@
           </picture>
           <ul class="social-list">
             <li>
-              <a href="#">
+              <a href="https://github.com/RealKendpr">
                 <picture>
                   <source
                     srcset="./assets/github-icon-dark.svg"
@@ -317,22 +343,26 @@
               ></a>
             </li>
             <li>
-              <a href="#"><img src="./assets/linkedin-icon.svg" alt="" /></a>
+              <a href="https://www.linkedin.com/in/kendpr/"
+                ><img src="./assets/linkedin-icon.svg" alt=""
+              /></a>
             </li>
             <li>
-              <a href="#"><img src="./assets/fiverr-icon.svg" alt="" /></a>
+              <a href="https://www.fiverr.com/kendpr"
+                ><img src="./assets/fiverr-icon.svg" alt=""
+              /></a>
             </li>
           </ul>
         </div>
         <ul class="nav-links">
           <li>
-            <a href="#">About Me</a>
+            <a href="#about">About Me</a>
           </li>
           <li>
             <a href="#">Contact</a>
           </li>
           <li>
-            <a href="#">Works</a>
+            <a href="#works">Works</a>
           </li>
         </ul>
         <p><small>Copyright &copy; 2024 Kendpr</small></p>

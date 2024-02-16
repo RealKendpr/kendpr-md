@@ -66,11 +66,11 @@ fetch("./style.css")
 fetch("./script.js")
   .then((response) => response.text())
   .then((textString) => {
-    jsBlock.innerText = textString.repeat(4);
+    jsBlock.innerText = textString.repeat(10);
   });
 
 fetch("./index.html")
   .then((response) => response.text())
   .then((textString) => {
-    htmlBlock.innerText = textString.repeat(2);
+    htmlBlock.innerText = textString.repeat(3);
   });
