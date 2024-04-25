@@ -60,7 +60,6 @@ fetch("./style.css")
   .then((response) => response.text())
   .then((textString) => {
     cssBlock.innerText = textString.repeat(2);
-    // cssContent = textString;
   });
 
 fetch("./script.js")
