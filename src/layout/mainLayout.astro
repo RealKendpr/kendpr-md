@@ -14,10 +14,12 @@ const { title } = Astro.props;
     />
     <title>{title}</title>
   </head>
-  <body class="bg-slate-500">
+  <body
+    class="bg-slate-500 prose-img:select-none prose-img:pointer-events-none"
+  >
     <Navigation client:load />
     <div
-      class="mb-8 mx-[2%] px-[clamp(16px,_5%,_32px)] max-w-[500px] rounded-2xl border overflow-hidden"
+      class="mb-8 mx-[2%] px-[clamp(16px,_5%,_32px)] max-w-[500px] rounded-2xl border overflow-hidden xsm:mx-auto"
     >
       <slot />
     </div>
