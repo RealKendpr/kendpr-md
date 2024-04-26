@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import MainLayout from "../layout/mainLayout.astro";
 import SkillCards from "../components/SkillCards.astro";
 import { Content as About } from "../content/about.mdx";
+import Projects from "../components/projects.astro";
 ---
 
 <MainLayout title="Kendpr Markdown">
@@ -12,6 +13,7 @@ import { Content as About } from "../content/about.mdx";
         <Image
           class="object-cover object-left h-full"
           src="/assets/images/peek.png"
+          loading="eager"
           alt="Kendpr"
           height="100"
           width="100"
@@ -29,10 +31,13 @@ import { Content as About } from "../content/about.mdx";
     >
       <About />
     </section>
-    <div class="prose-headings:font-bold prose-p:max-w-[40ch]">
+    <div class="prose-headings:font-bold prose-p:max-w-[40ch] grid gap-6">
       <SkillCards type="frontend" />
       <SkillCards type="backend" />
       <SkillCards type="others" />
+    </div>
+    <div>
+      <Projects />
     </div>
   </main>
 </MainLayout>

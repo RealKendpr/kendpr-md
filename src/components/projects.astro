@@ -1,0 +1,30 @@
+---
+import { Image } from "astro:assets";
+import * as projects from "../content/projects/projects.mdx";
+---
+
+<h2
+  class="relative mb-6 text-2xl font-bold after:absolute after:bottom-[-15%] after:w-11/12 after:h-px after:block after:bg-black"
+>
+  My Works
+</h2>
+<div class="grid gap-y-6">
+  {
+    projects.frontmatter.project.map((i: { link: string; img: string }) => (
+      <figure class="border relative overflow-hidden rounded-2xl group aspect-video">
+        <Image
+          src={i.img}
+          alt=""
+          width={1920}
+          height={1280}
+          loading={"eager"}
+        />
+        <div class="absolute bottom-[-100px] group-hover:bottom-0 right-0 left-0 bg-slate-500 px-4 py-2 backdrop-blur">
+          <a class="text-base font-medium" href={i.link}>
+            Visit Site
+          </a>
+        </div>
+      </figure>
+    ))
+  }
+</div>
