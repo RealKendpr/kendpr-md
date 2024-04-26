@@ -10,10 +10,10 @@ export function Navigation() {
         <a className="block w-8" href="#">
           <picture>
             <source
-              srcSet="./assets/logo-is_light.svg"
+              srcSet="./assets/icons/logo-is_light.svg"
               media="(prefers-color-scheme: dark)"
             />
-            <img src="./assets/logo-is_dark.svg" alt="Kendpr's Logo" />
+            <img src="./assets/icons/logo-is_dark.svg" alt="Kendpr's Logo" />
           </picture>
         </a>
         {dialogStatus === "close" && (

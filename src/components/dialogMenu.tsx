@@ -41,21 +41,21 @@ export function DialogMenu({
               <a href="https://github.com/RealKendpr">
                 <picture>
                   <source
-                    srcSet="./assets/github-icon-light.svg"
+                    srcSet="./assets/icons/github-icon-light.svg"
                     media="(prefers-color-scheme: dark)"
                   />
-                  <img src="./assets/github-icon-dark.svg" alt="" />
+                  <img src="./assets/icons/github-icon-dark.svg" alt="" />
                 </picture>
               </a>
             </li>
             <li className="w-8">
               <a href="https://www.linkedin.com/in/kendpr/">
-                <img src="./assets/linkedin-icon.svg" alt="" />
+                <img src="./assets/icons/linkedin-icon.svg" alt="" />
               </a>
             </li>
             <li className="w-8">
               <a href="https://www.fiverr.com/kendpr">
-                <img src="./assets/fiverr-icon.svg" alt="" />
+                <img src="./assets/icons/fiverr-icon.svg" alt="" />
               </a>
             </li>
           </ul>
