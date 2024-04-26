@@ -1,4 +1,6 @@
 import { useEffect, useRef } from "react";
+import { SocialList } from "./socialList";
+import { NavLinks } from "./navLinks";
 
 export function DialogMenu({
   dialogStatus,
@@ -25,45 +27,17 @@ export function DialogMenu({
     <dialog
       ref={dialog}
       className="fixed z-50 inset-0 rounded-2xl py-4 px-[clamp(1rem,_5%,_2rem)] border w-3/4 max-w-[500px]"
+      title="Dialog Menu"
     >
       <div className="flex flex-col-reverse">
-        <div>
-          <ul className="grid 5px">
-            <li>
-              <a href="#about">About Me</a>
-            </li>
-            <li>
-              <a href="#works">Works</a>
-            </li>
-          </ul>
-          <ul className="mt-1 flex gap-x-4">
-            <li className="w-8">
-              <a href="https://github.com/RealKendpr">
-                <picture>
-                  <source
-                    srcSet="./assets/icons/github-icon-light.svg"
-                    media="(prefers-color-scheme: dark)"
-                  />
-                  <img src="./assets/icons/github-icon-dark.svg" alt="" />
-                </picture>
-              </a>
-            </li>
-            <li className="w-8">
-              <a href="https://www.linkedin.com/in/kendpr/">
-                <img src="./assets/icons/linkedin-icon.svg" alt="" />
-              </a>
-            </li>
-            <li className="w-8">
-              <a href="https://www.fiverr.com/kendpr">
-                <img src="./assets/icons/fiverr-icon.svg" alt="" />
-              </a>
-            </li>
-          </ul>
+        <div className="last-of-type:prose-ul:mt-4 ">
+          <NavLinks />
+          <SocialList />
         </div>
         <div className="text-right">
           <button
             onClick={() => setDialogStatus("close")}
-            className="menu-button"
+            aria-labelledby="Close Button"
           >
             &#10060;
           </button>
