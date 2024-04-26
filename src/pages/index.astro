@@ -1,16 +1,20 @@
 ---
+import { Image } from "astro:assets";
 import MainLayout from "../layout/mainLayout.astro";
-import { Content as About } from "../pages/content/about.mdx";
+import SkillCards from "../components/SkillCards.astro";
+import { Content as About } from "../content/about.mdx";
 ---
 
 <MainLayout title="Kendpr Markdown">
   <header class="min-h-dvh grid content-center">
     <figure>
       <div class="w-[300px] h-[300px] rounded-2xl overflow-hidden">
-        <img
+        <Image
           class="object-cover object-left h-full"
-          src="./assets/peek.png"
-          alt="Kendpr's Photo"
+          src="/assets/images/peek.png"
+          alt="Kendpr"
+          height="100"
+          width="100"
         />
       </div>
       <figcaption>
@@ -25,5 +29,10 @@ import { Content as About } from "../pages/content/about.mdx";
     >
       <About />
     </section>
+    <div class="prose-headings:font-bold prose-p:max-w-[40ch]">
+      <SkillCards type="frontend" />
+      <SkillCards type="backend" />
+      <SkillCards type="others" />
+    </div>
   </main>
 </MainLayout>

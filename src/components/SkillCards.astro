@@ -1,0 +1,43 @@
+---
+import * as FrontEnd from "../content/skills/front-end.mdx";
+import * as BackEnd from "../content/skills/back-end.mdx";
+import * as Other from "../content/skills/other.mdx";
+const cardType: string = Astro.props.type;
+const card = {
+  get type() {
+    switch (cardType) {
+      case "frontend":
+        return FrontEnd;
+      case "backend":
+        return BackEnd;
+      case "others":
+        return Other;
+      default:
+        return;
+    }
+  },
+};
+---
+
+{
+  card.type != null ? (
+    <article class="prose-h2:text-xl prose-p:text-sm">
+      <div class="grid gap-y-6">
+        <div class="flex items-center gap-x-4 relative after:absolute after:bottom-[-12%] after:w-11/12 after:h-px after:bg-black">
+          <picture class="w-12 h-12">
+            <source
+              srcset={card.type.frontmatter.iconDarkMode}
+              media="(prefers-color-scheme: dark)"
+            />
+            <img src={card.type.frontmatter.iconLightMode} alt="" />
+          </picture>
+          <h2>{card.type.frontmatter.title}</h2>
+        </div>
+        <p>{card.type.frontmatter.description}</p>
+      </div>
+      <card.type.Content />
+    </article>
+  ) : (
+    ""
+  )
+}
