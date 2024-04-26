@@ -6,7 +6,7 @@ export function Navigation() {
 
   return (
     <nav className="fixed left-0 top-0 right-0 bg-black z-40">
-      <div className="py-2 px-[2%] max-w-lg flex justify-between">
+      <div className="py-2 px-[2%] max-w-lg flex justify-between mx-auto">
         <a className="block w-8" href="#">
           <picture>
             <source
