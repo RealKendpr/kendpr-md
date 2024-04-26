@@ -21,7 +21,7 @@ const card = {
 
 {
   card.type != null ? (
-    <article class="prose-h2:text-xl prose-p:text-sm">
+    <article class="prose-h2:text-xl prose-p:text-sm z-30 py-8 px-6 rounded-2xl border">
       <div class="grid gap-y-6">
         <div class="flex items-center gap-x-4 relative after:absolute after:bottom-[-12%] after:w-11/12 after:h-px after:bg-black">
           <picture class="w-12 h-12">
@@ -35,7 +35,9 @@ const card = {
         </div>
         <p>{card.type.frontmatter.description}</p>
       </div>
-      <card.type.Content />
+      <div class="prose-li:flex prose-li:gap-x-4 prose-img:w-8 prose-li:items-center prose-li:text-sm prose-ul:grid prose-ul:gap-y-1 prose-h3:mb-4 prose-h3:text-base prose-ul:items-center prose-h3:mt-5">
+        <card.type.Content />
+      </div>
     </article>
   ) : (
     ""
