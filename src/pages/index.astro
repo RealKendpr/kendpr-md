@@ -21,7 +21,7 @@ import Projects from "../components/projects.astro";
       </div>
       <figcaption>
         <h1 class="text-3xl font-bold">Hi, Im Ken</h1>
-        <p>Front-end Developer &amp; Photo Editor</p>
+        <p id="about">Front-end Developer &amp; Photo Editor</p>
       </figcaption>
     </figure>
   </header>
@@ -33,13 +33,13 @@ import Projects from "../components/projects.astro";
     >
       <About />
     </section>
+    <div id="works">
+      <Projects />
+    </div>
     <div class="grid gap-6 prose-p:max-w-[40ch]">
       <SkillCards type="frontend" />
       <SkillCards type="backend" />
       <SkillCards type="others" />
-    </div>
-    <div>
-      <Projects />
     </div>
   </main>
 </MainLayout>

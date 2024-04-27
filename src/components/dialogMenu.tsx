@@ -16,7 +16,7 @@ export function DialogMenu({
       ? dialog.current?.showModal()
       : dialog.current?.close();
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") e.preventDefault();
+      if (e.key === "Escape") setDialogStatus("close");
     };
     dialogStatus === "open"
       ? addEventListener("keydown", handleKeyDown)
@@ -25,11 +25,15 @@ export function DialogMenu({
 
   return (
     <dialog
+      onClick={() => setDialogStatus("close")}
       ref={dialog}
-      className="fixed inset-0 z-50 w-3/4 max-w-[500px] rounded-2xl border border-neutral-500 bg-neutral-700 px-[clamp(1rem,_5%,_2rem)] py-4"
+      className="fixed inset-0 w-3/4 max-w-screen-xsm rounded-2xl border border-neutral-500 bg-neutral-700 backdrop:bg-neutral-800 backdrop:bg-opacity-50"
       title="Dialog Menu"
     >
-      <div className="flex flex-col-reverse">
+      <div
+        className="flex flex-col-reverse px-[clamp(1rem,_5%,_2rem)] py-4"
+        onClick={(e) => e.stopPropagation()}
+      >
         <div className="last-of-type:prose-ul:mt-4 ">
           <NavLinks />
           <SocialList />

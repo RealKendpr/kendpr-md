@@ -7,7 +7,7 @@ export function Navigation() {
 
   return (
     <nav className="fixed left-0 right-0 top-0 z-40 border-b border-b-neutral-500 bg-neutral-700">
-      <div className="mx-auto flex max-w-lg justify-between px-[2%] py-2 xsm:px-0">
+      <div className="mx-auto flex max-w-screen-xsm justify-between px-[2%] py-2 xsm:px-0">
         <a href="#b">
           <Logo location="navigation" />
         </a>
