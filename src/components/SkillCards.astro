@@ -21,10 +21,10 @@ const card = {
 
 {
   card.type != null ? (
-    <article class="prose-h2:text-xl prose-p:text-sm z-30 py-8 px-6 rounded-2xl border">
+    <article class="z-30 rounded-2xl border border-neutral-500 px-6 py-8 prose-h2:text-xl">
       <div class="grid gap-y-6">
-        <div class="flex items-center gap-x-4 relative after:absolute after:bottom-[-12%] after:w-11/12 after:h-px after:bg-black">
-          <picture class="w-12 h-12">
+        <div class="relative flex items-center gap-x-4 after:absolute after:bottom-[-12%] after:h-px after:w-11/12 after:bg-neutral-500">
+          <picture class="h-12 w-12">
             <source
               srcset={card.type.frontmatter.iconDarkMode}
               media="(prefers-color-scheme: dark)"
@@ -35,7 +35,7 @@ const card = {
         </div>
         <p>{card.type.frontmatter.description}</p>
       </div>
-      <div class="prose-li:flex prose-li:gap-x-4 prose-img:w-8 prose-li:items-center prose-li:text-sm prose-ul:grid prose-ul:gap-y-1 prose-h3:mb-4 prose-h3:text-base prose-ul:items-center prose-h3:mt-5">
+      <div class="prose-h3:mb-4 prose-h3:mt-5 prose-h3:text-base prose-ul:grid prose-ul:items-center prose-ul:gap-y-2 prose-li:flex prose-li:items-center prose-li:gap-x-4 prose-li:text-sm prose-img:size-8">
         <card.type.Content />
       </div>
     </article>

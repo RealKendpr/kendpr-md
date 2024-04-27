@@ -26,7 +26,7 @@ export function DialogMenu({
   return (
     <dialog
       ref={dialog}
-      className="fixed z-50 inset-0 rounded-2xl py-4 px-[clamp(1rem,_5%,_2rem)] border w-3/4 max-w-[500px]"
+      className="fixed inset-0 z-50 w-3/4 max-w-[500px] rounded-2xl border border-neutral-500 bg-neutral-700 px-[clamp(1rem,_5%,_2rem)] py-4"
       title="Dialog Menu"
     >
       <div className="flex flex-col-reverse">
@@ -36,6 +36,7 @@ export function DialogMenu({
         </div>
         <div className="text-right">
           <button
+            className="squish duration-150 ease-in-out"
             onClick={() => setDialogStatus("close")}
             aria-labelledby="Close Button"
           >

@@ -7,11 +7,11 @@ import Projects from "../components/projects.astro";
 ---
 
 <MainLayout title="Kendpr Markdown">
-  <header class="min-h-dvh grid content-center">
+  <header class="grid min-h-dvh content-center">
     <figure>
-      <div class="w-[300px] h-[300px] rounded-2xl overflow-hidden">
+      <div class="h-[300px] w-[300px] overflow-hidden rounded-2xl">
         <Image
-          class="object-cover object-left h-full"
+          class="h-full object-cover object-left"
           src="/assets/images/peek.png"
           loading="eager"
           alt="Kendpr"
@@ -25,13 +25,15 @@ import Projects from "../components/projects.astro";
       </figcaption>
     </figure>
   </header>
-  <main class="pt-8 pb-16 grid gap-8 border-t">
+  <main
+    class="grid gap-8 border-t border-t-neutral-500 pb-16 pt-8 prose-headings:font-bold prose-p:text-sm"
+  >
     <section
-      class="prose-headings:font-bold prose-h2:text-lg prose-p:text-sm prose-p:first-of-type:mb-3 prose-p:first-of-type:mt-1"
+      class="prose-h2:text-lg prose-p:first-of-type:mb-3 prose-p:first-of-type:mt-1"
     >
       <About />
     </section>
-    <div class="prose-headings:font-bold prose-p:max-w-[40ch] grid gap-6">
+    <div class="grid gap-6 prose-p:max-w-[40ch]">
       <SkillCards type="frontend" />
       <SkillCards type="backend" />
       <SkillCards type="others" />

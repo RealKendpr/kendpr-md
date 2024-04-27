@@ -1,7 +1,7 @@
 export function SocialList() {
   return (
-    <ul className="flex gap-x-4">
-      <li className="w-8">
+    <ul className="flex gap-x-4 *:duration-150 *:ease-in-out">
+      <li className="squish w-8">
         <a href="https://github.com/RealKendpr">
           <picture>
             <source
@@ -16,7 +16,7 @@ export function SocialList() {
           </picture>
         </a>
       </li>
-      <li className="w-8">
+      <li className="squish w-8">
         <a href="https://www.linkedin.com/in/kendpr/">
           <img
             loading="lazy"
@@ -25,7 +25,7 @@ export function SocialList() {
           />
         </a>
       </li>
-      <li className="w-8">
+      <li className="squish w-8">
         <a href="https://www.fiverr.com/kendpr">
           <img
             loading="lazy"

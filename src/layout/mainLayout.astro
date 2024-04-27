@@ -17,11 +17,11 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body
-    class="bg-slate-800 font-display prose-img:pointer-events-none prose-img:select-none"
+    class="hover:prose-a:text-accent bg-neutral-800 font-display prose-headings:text-neutral-100 prose-p:text-neutral-400 prose-a:text-neutral-100 prose-a:duration-200 prose-a:ease-in-out hover:prose-a:underline prose-li:text-neutral-400 prose-img:pointer-events-none prose-img:select-none"
   >
     <Navigation client:load />
     <div
-      class="mb-8 max-w-[500px] overflow-hidden rounded-2xl px-[clamp(16px,_5%,_32px)] xsm:mx-auto xsm:border"
+      class="mb-8 max-w-[500px] overflow-hidden rounded-2xl px-[clamp(16px,_5%,_32px)] xsm:mx-auto xsm:border xsm:border-neutral-500"
     >
       <slot />
       <Footer />

@@ -1,3 +1,14 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.squish {
+  @apply focus-within:scale-x-75 focus-within:scale-y-125 hover:scale-x-75 hover:scale-y-125;
+}
+
+:root {
+  --blur-blue: hsla(197, 100%, 34%, 0.5);
+}
 @font-face {
   font-family: "Inter";
   font-weight: 400;

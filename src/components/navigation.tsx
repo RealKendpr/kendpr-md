@@ -6,15 +6,15 @@ export function Navigation() {
   const [dialogStatus, setDialogStatus] = useState<string>("close");
 
   return (
-    <nav className="fixed left-0 top-0 right-0 bg-black z-40">
-      <div className="py-2 px-[2%] max-w-lg flex justify-between mx-auto">
+    <nav className="fixed left-0 right-0 top-0 z-40 border-b border-b-neutral-500 bg-neutral-700">
+      <div className="mx-auto flex max-w-lg justify-between px-[2%] py-2 xsm:px-0">
         <a href="#b">
           <Logo location="navigation" />
         </a>
         {dialogStatus === "close" && (
           <button
             onClick={() => setDialogStatus("open")}
-            className="open-button text-2xl hover:cursor-pointer"
+            className="squish text-2xl duration-150 ease-in-out hover:cursor-pointer"
           >
             &#129386;
           </button>
