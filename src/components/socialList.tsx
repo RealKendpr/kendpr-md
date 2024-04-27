@@ -5,12 +5,12 @@ export function SocialList() {
         <a href="https://github.com/RealKendpr">
           <picture>
             <source
-              srcSet="./assets/icons/github-icon-light.svg"
+              srcSet="./assets/icons/github-icon-dark.svg"
               media="(prefers-color-scheme: dark)"
             />
             <img
               loading="lazy"
-              src="./assets/icons/github-icon-dark.svg"
+              src="./assets/icons/github-icon-light.svg"
               alt="Github"
             />
           </picture>
