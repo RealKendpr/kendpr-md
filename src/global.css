@@ -5,17 +5,22 @@
 .squish {
   @apply focus-within:scale-x-75 focus-within:scale-y-125 hover:scale-x-75 hover:scale-y-125;
 }
+:root {
+  --border-clr: #e9ecef;
+}
 .fade-border-right {
-  border-image: linear-gradient(to right, #3e3e42, transparent 75%) 1;
+  border-image: linear-gradient(to right, var(--border-clr), transparent 75%) 1;
 }
 .fade-border-left {
-  border-image: linear-gradient(to left, #3e3e42, transparent 75%) 1;
+  border-image: linear-gradient(to left, var(--border-clr), transparent 75%) 1;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --border-clr: #495057;
+  }
 }
 
 @layer base {
-  :root {
-    --blur-blue: hsla(197, 100%, 34%, 0.5);
-  }
   @font-face {
     font-family: "Inter";
     font-weight: 400;

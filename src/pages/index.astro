@@ -26,17 +26,17 @@ import Projects from "../components/projects.astro";
     </figure>
   </header>
   <main
-    class="grid gap-8 border-t border-t-neutral-500 pb-16 pt-8 prose-headings:font-bold prose-p:text-sm"
+    class="mx-auto grid max-w-screen-xsm justify-items-center gap-y-16 border-y border-y-neutral-200 pb-16 pt-8 prose-headings:font-bold prose-p:text-base sm:border-b-0 dark:border-y-neutral-700"
   >
     <section
-      class="prose-h2:text-lg prose-p:first-of-type:mb-3 prose-p:first-of-type:mt-1"
+      class="prose-h2:text-base prose-p:first-of-type:mb-3 prose-p:first-of-type:mt-1"
     >
       <About />
     </section>
     <div id="works">
       <Projects />
     </div>
-    <div class="grid gap-6 prose-p:max-w-[40ch]">
+    <div class="grid gap-6 prose-p:text-pretty">
       <SkillCards type="frontend" />
       <SkillCards type="backend" />
       <SkillCards type="others" />

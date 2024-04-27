@@ -6,8 +6,8 @@ export function Navigation() {
   const [dialogStatus, setDialogStatus] = useState<string>("close");
 
   return (
-    <nav className="fixed left-0 right-0 top-0 z-40 border-b border-b-neutral-500 bg-neutral-700">
-      <div className="mx-auto flex max-w-screen-xsm justify-between px-[2%] py-2 xsm:px-0">
+    <nav className="fixed left-0 right-0 top-0 z-40 border-b border-b-neutral-200 bg-neutral-500 bg-opacity-70 backdrop-blur-md dark:border-b-neutral-700 dark:bg-neutral-800">
+      <div className="mx-auto flex max-w-screen-sm justify-between px-[2%] py-2 sm:px-0">
         <a href="#b">
           <Logo location="navigation" />
         </a>

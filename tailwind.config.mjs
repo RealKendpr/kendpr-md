@@ -4,16 +4,20 @@ export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     colors: {
-      accent: "#007aac",
+      accent: {
+        dark: "#007aac",
+        light: "#001d59",
+      },
       neutral: {
-        100: "#fafafa",
-        200: "#f5f5f5",
-        300: "#ececec",
-        400: "#d0d0d0",
-        500: "#3e3e42",
-        600: "#2d2d30",
-        700: "#252526",
-        800: "#1e1e1e",
+        100: "#f8f9fa",
+        200: "#E9ECEF",
+        300: "#DEE2E6",
+        400: "#d5d5d5",
+        500: "#CED4DA",
+        600: "#6C757D",
+        700: "#495057",
+        800: "#1f1f1f",
+        900: "#141414",
       },
     },
     extend: {
