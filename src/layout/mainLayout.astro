@@ -2,10 +2,11 @@
 import "../global.css";
 import Footer from "../components/footer.astro";
 import { Navigation } from "../components/navigation";
+import FooterBorder from "../components/footerBorder.astro";
 const { title } = Astro.props;
 ---
 
-<html>
+<html class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,14 +18,15 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body
-    class="hover:prose-a:text-accent bg-neutral-800 font-display prose-headings:text-neutral-100 prose-p:text-neutral-400 prose-a:text-neutral-100 prose-a:duration-200 prose-a:ease-in-out hover:prose-a:underline prose-li:text-neutral-400 prose-img:pointer-events-none prose-img:select-none"
+    class="hover:prose-a:text-accent overflow-x-hidden bg-neutral-800 font-display prose-headings:text-neutral-100 prose-p:text-neutral-400 prose-a:text-neutral-100 prose-a:duration-200 prose-a:ease-in-out hover:prose-a:underline prose-li:text-neutral-400 prose-img:pointer-events-none prose-img:select-none"
   >
     <Navigation client:load />
     <div
-      class="mb-8 max-w-[500px] overflow-hidden rounded-2xl px-[clamp(16px,_5%,_32px)] xsm:mx-auto xsm:border xsm:border-neutral-500"
+      class="relative max-w-screen-xsm px-[clamp(16px,_5%,_32px)] xsm:mx-auto xsm:border-x xsm:border-neutral-500"
     >
       <slot />
-      <Footer />
+      <FooterBorder />
     </div>
+    <Footer />
   </body>
 </html>

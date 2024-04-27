@@ -5,6 +5,12 @@
 .squish {
   @apply focus-within:scale-x-75 focus-within:scale-y-125 hover:scale-x-75 hover:scale-y-125;
 }
+.fade-border-right {
+  border-image: linear-gradient(to right, #3e3e42, transparent 75%) 1;
+}
+.fade-border-left {
+  border-image: linear-gradient(to left, #3e3e42, transparent 75%) 1;
+}
 
 @layer base {
   :root {
