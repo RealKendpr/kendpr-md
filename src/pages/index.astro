@@ -4,6 +4,7 @@ import MainLayout from "../layout/mainLayout.astro";
 import SkillCards from "../components/SkillCards.astro";
 import { Content as About } from "../content/about.mdx";
 import Projects from "../components/projects.astro";
+import PostCard from "../components/postCard.astro";
 ---
 
 <MainLayout title="Kendpr Markdown">
@@ -33,9 +34,12 @@ import Projects from "../components/projects.astro";
     >
       <About />
     </section>
-    <div id="works">
-      <Projects />
+    <div id="posts">
+      <PostCard />
     </div>
+    <section id="works">
+      <Projects />
+    </section>
     <div class="grid gap-6 prose-p:text-pretty">
       <SkillCards type="frontend" />
       <SkillCards type="backend" />

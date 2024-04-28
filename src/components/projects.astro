@@ -1,36 +1,14 @@
 ---
 import { Image } from "astro:assets";
 import * as projects from "../content/projects/projects.mdx";
+import SectionHeader from "./sectionHeader.astro";
 ---
 
-<div
-  class="relative mb-6 flex items-center justify-between px-4 after:absolute after:bottom-[-35%] after:left-0 after:block after:h-px after:w-full after:bg-neutral-200 after:dark:bg-neutral-700"
->
-  <h2 class="text-lg">My Works</h2>
-  <a
-    class="flex items-center gap-x-2 text-sm"
-    href="https://github.com/RealKendpr"
-    target="_blank"
-  >
-    See more on Github
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="1em"
-      height="1em"
-      viewBox="0 0 24 24"
-      aria-hidden="true"
-    >
-      <path
-        fill="currentColor"
-        d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1"
-      ></path>
-      <path
-        fill="currentColor"
-        d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42a1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2"
-      ></path>
-    </svg>
-  </a>
-</div>
+<SectionHeader
+  title="My Works"
+  linkText="See more on Github"
+  linkUrl="https://github.com/RealKendpr"
+/>
 <div class="grid gap-y-6">
   {
     projects.frontmatter.list.map(
@@ -43,9 +21,10 @@ import * as projects from "../content/projects/projects.mdx";
             height={1280}
             loading="eager"
           />
-          <div class="invisible absolute bottom-[-100px] left-0 right-0 flex flex-row-reverse items-center justify-end gap-x-2 bg-accent-light bg-opacity-70 px-4 py-2 opacity-0 backdrop-blur-md duration-150 ease-linear group-hover:visible group-hover:bottom-0 group-hover:opacity-100 dark:bg-accent-dark">
+          // pointer events-none, also disables pointer events on child element
+          <div class="pointer-events-none invisible absolute bottom-[-100px] left-0 right-0 flex flex-row-reverse items-center justify-end gap-x-2 bg-accent-light bg-opacity-70 px-4 py-2 opacity-0 backdrop-blur-md duration-150 ease-linear group-hover:visible group-hover:bottom-0 group-hover:opacity-100 dark:bg-accent-dark dark:bg-opacity-70">
             <a
-              class="peer text-base font-medium !text-neutral-400 hover:dark:!text-neutral-500"
+              class="peer pointer-events-auto text-base font-medium !text-neutral-400 hover:dark:!text-neutral-500"
               href={i.link}
               target="_blank"
             >
