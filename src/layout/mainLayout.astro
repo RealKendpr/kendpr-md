@@ -18,9 +18,9 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body
-    class="overflow-x-hidden bg-neutral-400 font-display prose-headings:text-neutral-800 prose-p:text-neutral-700 prose-a:text-neutral-700 prose-a:duration-200 prose-a:ease-in-out hover:prose-a:text-accent-light hover:prose-a:underline prose-li:text-neutral-700 prose-img:pointer-events-none prose-img:select-none dark:bg-neutral-900 dark:prose-headings:text-neutral-400 dark:prose-p:text-neutral-500 dark:prose-a:text-neutral-500 dark:hover:prose-a:text-accent-dark dark:prose-li:text-neutral-500"
+    class="!overflow-x-hidden bg-neutral-400 font-display prose-headings:text-neutral-800 prose-p:text-neutral-700 prose-a:text-neutral-700 prose-a:duration-200 prose-a:ease-in-out hover:prose-a:text-accent-light hover:prose-a:underline prose-li:text-neutral-700 prose-img:pointer-events-none prose-img:select-none dark:bg-neutral-900 dark:prose-headings:text-neutral-400 dark:prose-p:text-neutral-500 dark:prose-a:text-neutral-500 dark:hover:prose-a:text-accent-dark dark:prose-li:text-neutral-500"
   >
-    <Navigation client:load />
+    <Navigation client:idle />
     <div
       class="relative max-w-screen-sm px-[clamp(16px,_5%,_32px)] sm:mx-auto sm:border-x sm:border-neutral-200 sm:!px-14 sm:dark:border-neutral-700"
     >
