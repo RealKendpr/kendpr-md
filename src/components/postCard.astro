@@ -1,21 +1,31 @@
 ---
-import SectionHeader from "./sectionHeader.astro";
+import { Image } from "astro:assets";
+const { title, description, pubDate, image, url } = Astro.props;
 ---
 
-<section>
-  <SectionHeader title="Posts" linkText="See more Posts" linkUrl="#b" />
-  <article class="aspect-video w-full p-4">
-    <figure class="w-full">
-      <div class="aspect-video w-full rounded-lg bg-accent-dark"></div>
-      <figcaption class="group my-4">
-        <a class="hidden group-hover:inline-block" href="#e"
-          >Lorem ipsum dolor sit.</a
-        >
-        <h3 class="group-hover:hidden">Lorem ipsum dolor sit.</h3>
-      </figcaption>
-    </figure>
+<article class="w-full">
+  <figure>
+    <div class="aspect-[16/4] w-full overflow-hidden rounded-lg">
+      <Image
+        class="h-full object-cover object-center"
+        src={image}
+        loading="lazy"
+        alt="Kendpr"
+        height="960"
+        width="1280"
+      />
+    </div>
+    <figcaption class="group mb-2 mt-4 flex items-center justify-between">
+      <a class="hidden font-bold group-hover:inline-block" href={url}>{title}</a
+      >
+      <h3 class="group-hover:hidden">{title}</h3>
+      <time
+        class="text-xs text-neutral-800 dark:text-neutral-400"
+        datetime={pubDate}>{pubDate}</time
+      >
+    </figcaption>
     <p class="!text-sm">
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, maxime.
+      {description}
     </p>
-  </article>
-</section>
+  </figure>
+</article>

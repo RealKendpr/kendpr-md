@@ -4,7 +4,7 @@ import MainLayout from "../layout/mainLayout.astro";
 import SkillCards from "../components/SkillCards.astro";
 import { Content as About } from "../content/about.mdx";
 import Projects from "../components/projects.astro";
-import PostCard from "../components/postCard.astro";
+import LatestPosts from "../components/latestPosts.astro";
 ---
 
 <MainLayout title="Kendpr Markdown">
@@ -34,9 +34,9 @@ import PostCard from "../components/postCard.astro";
     >
       <About />
     </section>
-    <div id="posts">
-      <PostCard />
-    </div>
+    <section id="posts">
+      <LatestPosts />
+    </section>
     <section id="works">
       <Projects />
     </section>

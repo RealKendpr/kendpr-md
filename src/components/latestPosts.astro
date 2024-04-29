@@ -1,0 +1,31 @@
+---
+const posts = await Astro.glob("../pages/posts/*.mdx");
+import PostCard from "./postCard.astro";
+import Section from "../layout/section.astro";
+import dayJs from "dayjs";
+---
+
+<Section title="Posts" linkText="See more Posts" linkUrl="/posts">
+  {
+    posts
+      .sort(
+        (a, b) =>
+          new Date(b.frontmatter.pubDate).getTime() -
+          new Date(a.frontmatter.pubDate).getTime()
+      )
+      .slice(0, 3)
+      .map((post) =>
+        post.frontmatter.title &&
+        post.frontmatter.description &&
+        post.frontmatter.image ? (
+          <PostCard
+            url={post.url}
+            title={post.frontmatter.title}
+            description={post.frontmatter.description}
+            image={post.frontmatter.image}
+            pubDate={dayJs(post.frontmatter.pubDate).format("ddd, D YYYY")}
+          />
+        ) : null
+      )
+  }
+</Section>

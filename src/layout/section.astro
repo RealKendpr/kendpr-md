@@ -1,0 +1,9 @@
+---
+import SectionHeader from "../components/sectionHeader.astro";
+const { title, linkText, linkUrl } = Astro.props;
+---
+
+<SectionHeader title={title} linkText={linkText} linkUrl={linkUrl} />
+<div class="grid gap-y-10">
+  <slot />
+</div>
