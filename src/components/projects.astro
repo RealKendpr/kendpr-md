@@ -13,7 +13,14 @@ import Linkout from "./icons/linkout.astro";
   {
     projects.frontmatter.list.map(
       (i: { link: string; img: string; alt: string }) => (
-        <div class="group relative aspect-video overflow-hidden rounded-2xl border border-neutral-200 dark:border-neutral-700">
+        <a
+          href={i.link}
+          class="group relative grid aspect-video place-items-center overflow-hidden rounded-lg border border-neutral-200 dark:border-neutral-700"
+        >
+          <div class="absolute inset-0 h-full w-full bg-accent-dark opacity-0 duration-100 ease-linear group-hover:opacity-50 dark:bg-accent-light" />
+          <span class="absolute m-auto hidden text-neutral-800 group-hover:block dark:text-neutral-400">
+            <Linkout size="size-10" />
+          </span>
           <Image
             src={i.img}
             alt={i.alt}
@@ -21,19 +28,7 @@ import Linkout from "./icons/linkout.astro";
             height={1280}
             loading="eager"
           />
-          <div class="pointer-events-none invisible absolute bottom-[-100px] left-0 right-0 flex flex-row-reverse items-center justify-end gap-x-2 bg-accent-light bg-opacity-70 px-4 py-2 opacity-0 backdrop-blur-md duration-150 ease-linear group-hover:visible group-hover:bottom-0 group-hover:opacity-100 dark:bg-accent-dark dark:bg-opacity-70">
-            <a
-              class="peer pointer-events-auto text-base font-medium !text-neutral-400 hover:dark:!text-neutral-500"
-              href={i.link}
-              target="_blank"
-            >
-              Visit Site
-            </a>
-            <span class="relative text-neutral-400 duration-150 ease-linear peer-hover:scale-125 dark:text-neutral-500">
-              <Linkout />
-            </span>
-          </div>
-        </div>
+        </a>
       )
     )
   }
