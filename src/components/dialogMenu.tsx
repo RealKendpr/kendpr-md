@@ -27,7 +27,7 @@ export function DialogMenu({
     <dialog
       onClick={() => setDialogStatus("close")}
       ref={dialog}
-      className="backdrop:bg-neutral-900 dark:bg-neutral-900 fixed inset-0 w-3/4 max-w-screen-xsm rounded-2xl border border-neutral-300 bg-neutral-500 backdrop:bg-opacity-50 backdrop:backdrop-blur-md dark:border-neutral-700"
+      className="open:open-dialog fixed inset-0 w-3/4 max-w-screen-xsm rounded-2xl border border-neutral-300 bg-neutral-500 backdrop:bg-neutral-900 backdrop:bg-opacity-50 backdrop:backdrop-blur-md dark:border-neutral-700 dark:bg-neutral-900"
       title="Dialog Menu"
     >
       <div
