@@ -29,6 +29,10 @@ export default {
         display: ["Inter", ...defaultTheme.fontFamily.sans],
       },
     },
+    data: {
+      paddingtop: "paddingtop='true'",
+      wrapsBlogPost: "wrapsBlogPost='true'",
+    },
   },
   plugins: [require("@tailwindcss/typography")],
 };

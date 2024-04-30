@@ -5,45 +5,48 @@ import SkillCards from "../components/cards/SkillCards.astro";
 import { Content as About } from "../content/about.mdx";
 import Projects from "../components/sections/projects.astro";
 import LatestPosts from "../components/sections/latestPosts.astro";
+import Column from "../layout/column.astro";
 ---
 
 <MainLayout title="Kendpr Markdown">
-  <header class="grid min-h-dvh content-center">
-    <figure>
-      <div class="h-[300px] w-[300px]">
-        <Image
-          class="h-full object-contain object-left"
-          src={"/kendpr-md/assets/images/peek.png"}
-          loading="eager"
-          alt="Kendpr"
-          height="300"
-          width="300"
-        />
-      </div>
-      <figcaption>
-        <h1 class="text-3xl font-bold">Hi, Im Ken</h1>
-        <p id="about">Front-end Developer &amp; Photo Editor</p>
-      </figcaption>
-    </figure>
-  </header>
-  <main
-    class="mx-auto grid max-w-screen-xsm justify-items-center gap-y-20 border-t border-y-neutral-200 pb-16 pt-8 prose-headings:font-bold prose-p:text-base maxSm:border-b dark:border-y-neutral-700"
-  >
-    <section
-      class="prose-h2:text-base prose-p:first-of-type:mb-3 prose-p:first-of-type:mt-1"
+  <Column>
+    <header class="grid min-h-dvh content-center">
+      <figure>
+        <div class="h-[300px] w-[300px]">
+          <Image
+            class="h-full object-contain object-left"
+            src={"/kendpr-md/assets/images/peek.png"}
+            loading="eager"
+            alt="Kendpr"
+            height="300"
+            width="300"
+          />
+        </div>
+        <figcaption>
+          <h1 class="text-3xl font-bold">Hi, Im Ken</h1>
+          <p id="about">Front-end Developer &amp; Photo Editor</p>
+        </figcaption>
+      </figure>
+    </header>
+    <main
+      class="mx-auto grid max-w-screen-xsm justify-items-center gap-y-20 border-t border-y-neutral-200 pb-16 pt-8 prose-headings:font-bold prose-p:text-base maxSm:border-b dark:border-y-neutral-700"
     >
-      <About />
-    </section>
-    <section id="posts">
-      <LatestPosts />
-    </section>
-    <section id="works">
-      <Projects />
-    </section>
-    <div class="grid gap-6 prose-p:text-pretty">
-      <SkillCards type="frontend" />
-      <SkillCards type="backend" />
-      <SkillCards type="others" />
-    </div>
-  </main>
+      <section
+        class="prose-h2:text-base prose-p:first-of-type:mb-3 prose-p:first-of-type:mt-1"
+      >
+        <About />
+      </section>
+      <section id="posts">
+        <LatestPosts />
+      </section>
+      <section id="works">
+        <Projects />
+      </section>
+      <div class="grid gap-6 prose-p:text-pretty">
+        <SkillCards type="frontend" />
+        <SkillCards type="backend" />
+        <SkillCards type="others" />
+      </div>
+    </main>
+  </Column>
 </MainLayout>

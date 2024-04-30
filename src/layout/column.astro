@@ -1,0 +1,12 @@
+---
+import FooterBorder from "../components/footer/footerBorder.astro";
+const { wrapsBlogPost } = Astro.props;
+---
+
+<div
+  data-wrapsBlogPost={wrapsBlogPost === "true" ? "true" : "false"}
+  class="prose-headings:data-wrapsBlogPost:font-bold col-start-2 w-full max-w-screen-sm bg-neutral-400 px-[clamp(16px,_5%,_32px)] sm:relative sm:mx-auto sm:border-x sm:border-neutral-200 sm:!px-14 dark:bg-neutral-900 sm:dark:border-neutral-700"
+>
+  <slot />
+  <FooterBorder />
+</div>

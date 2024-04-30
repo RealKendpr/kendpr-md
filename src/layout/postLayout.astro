@@ -3,13 +3,15 @@ const { frontmatter } = Astro.props;
 import dayjs from "dayjs";
 import MainLayout from "./mainLayout.astro";
 import Thumbnail from "../components/thumbnail.astro";
+import Column from "./column.astro";
 ---
 
-<MainLayout title={frontmatter.title}>
-  <div
-    class="mt-20 grid gap-y-10 border-y-neutral-400 pb-16 prose-headings:font-bold maxSm:border-b dark:border-y-neutral-700"
-  >
-    <header>
+<MainLayout title={frontmatter.title} paddingTop="true" wrapsBlogPost="true">
+  <nav class="relative hidden justify-self-end lg:block">
+    <div class="sticky top-20"></div>
+  </nav>
+  <Column wrapsBlogPost="true">
+    <header class="mb-10">
       <Thumbnail
         loading="eager"
         alt={frontmatter.title}
@@ -26,9 +28,10 @@ import Thumbnail from "../components/thumbnail.astro";
       </div>
     </header>
     <main>
-      <article class="grid gap-y-2 prose-ol:list-inside prose-ol:list-decimal">
+      <article class="grid gap-y-4 prose-ol:list-inside prose-ol:list-decimal">
         <slot />
       </article>
     </main>
-  </div>
+  </Column>
+  <aside class="hidden justify-self-start lg:block"></aside>
 </MainLayout>
