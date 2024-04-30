@@ -35,7 +35,7 @@ export function DialogMenu({
         onClick={(e) => e.stopPropagation()}
       >
         <div className="last-of-type:prose-ul:mt-4 ">
-          <NavLinks />
+          <NavLinks setDialogStatus={setDialogStatus} />
           <SocialList />
         </div>
         <div className="text-right">
