@@ -13,7 +13,7 @@ export function NavLinks({
   return (
     <ul className="grid gap-1 place-self-end">
       {linkList.map((link) => (
-        <li>
+        <li key={link.url}>
           <a
             onClick={() => {
               setDialogStatus ? setDialogStatus("close") : null;
