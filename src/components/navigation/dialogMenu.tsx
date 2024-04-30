@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
-import { SocialList } from "./socialList";
-import { NavLinks } from "./navLinks";
+import { SocialList } from "../socialList";
+import { NavLinks } from "../navLinks";
 
 export function DialogMenu({
   dialogStatus,

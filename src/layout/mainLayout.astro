@@ -1,8 +1,8 @@
 ---
 import "../global.css";
-import Footer from "../components/footer.astro";
-import { Navigation } from "../components/navigation";
-import FooterBorder from "../components/footerBorder.astro";
+import Footer from "../components/footer/footer.astro";
+import { Navigation } from "../components/navigation/navigation";
+import FooterBorder from "../components/footer/footerBorder.astro";
 const { title } = Astro.props;
 ---
 
@@ -18,12 +18,12 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body
-    class="hover:prose-a:text-accent-light dark:hover:prose-a:text-accent-dark !overflow-x-hidden bg-neutral-400 font-display prose-headings:text-neutral-800 prose-p:text-neutral-700 prose-a:text-neutral-700 prose-a:duration-200 prose-a:ease-in-out hover:prose-a:underline prose-li:text-neutral-700 prose-img:pointer-events-none prose-img:select-none dark:bg-neutral-900 dark:prose-headings:text-neutral-400 dark:prose-p:text-neutral-500 dark:prose-a:text-neutral-500 dark:prose-li:text-neutral-500"
+    class="overflow-x-hidden bg-neutral-400 font-display prose-headings:text-neutral-800 prose-p:text-neutral-700 prose-a:text-neutral-700 prose-a:duration-200 prose-a:ease-in-out hover:prose-a:text-accent-light hover:prose-a:underline prose-li:text-neutral-700 prose-img:pointer-events-none prose-img:select-none dark:bg-neutral-900 dark:prose-headings:text-neutral-400 dark:prose-p:text-neutral-500 dark:prose-a:text-neutral-500 dark:hover:prose-a:text-accent-dark dark:prose-li:text-neutral-500"
   >
     <div class="grid min-h-dvh grid-rows-[1fr,auto]">
       <Navigation client:idle />
       <div
-        class="max-w-screen-sm bg-neutral-400 px-[clamp(16px,_5%,_32px)] sm:relative sm:mx-auto sm:border-x sm:border-neutral-200 sm:!px-14 dark:bg-neutral-900 sm:dark:border-neutral-700"
+        class="w-full max-w-screen-sm bg-neutral-400 px-[clamp(16px,_5%,_32px)] sm:relative sm:mx-auto sm:border-x sm:border-neutral-200 sm:!px-14 dark:bg-neutral-900 sm:dark:border-neutral-700"
       >
         <slot />
         <FooterBorder />
@@ -32,3 +32,4 @@ const { title } = Astro.props;
     </div>
   </body>
 </html>
+../components/navigation/navigation

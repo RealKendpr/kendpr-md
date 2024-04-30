@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { DialogMenu } from "./dialogMenu";
-import { Logo } from "./logo";
+import { Logo } from "../logo";
 
 export function Navigation() {
   const [dialogStatus, setDialogStatus] = useState<string>("close");
