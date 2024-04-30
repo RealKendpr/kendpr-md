@@ -23,6 +23,7 @@ export default {
     extend: {
       screens: {
         xsm: "500px",
+        maxSm: { max: "640px" },
       },
       fontFamily: {
         display: ["Inter", ...defaultTheme.fontFamily.sans],
