@@ -4,13 +4,13 @@ import { SocialList } from "./socialList";
 import { Logo } from "./logo";
 ---
 
-<footer class="px-[clamp(16px,_5%,_56px)]">
+<footer class="bg-neutral-400 px-[clamp(16px,_5%,_56px)] dark:bg-neutral-900">
   <div class="grid gap-8 py-8 sm:grid-cols-2 sm:!pt-16">
     <div class="prose-ul:mt-4">
       <Logo location="footer" />
       <SocialList />
     </div>
-    <NavLinks />
+    <NavLinks setDialogStatus={null} />
     <p class="col-span-2 place-self-center">
       <small>Copyright &copy; 2024 Kendpr</small>
     </p>

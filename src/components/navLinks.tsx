@@ -1,7 +1,7 @@
 export function NavLinks({
   setDialogStatus,
 }: {
-  setDialogStatus: React.Dispatch<React.SetStateAction<string>>;
+  setDialogStatus: React.Dispatch<React.SetStateAction<string>> | null;
 }) {
   const linkList = [
     { url: "/#about", text: "About Me" },
@@ -16,7 +16,7 @@ export function NavLinks({
         <li>
           <a
             onClick={() => {
-              setDialogStatus("close");
+              setDialogStatus ? setDialogStatus("close") : null;
             }}
             href={link.url}
           >
