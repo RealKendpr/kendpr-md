@@ -19,6 +19,7 @@ import dayJs from "dayjs";
         post.frontmatter.description &&
         post.frontmatter.image ? (
           <PostCard
+            type="LatestPosts"
             url={post.url}
             title={post.frontmatter.title}
             description={post.frontmatter.description}

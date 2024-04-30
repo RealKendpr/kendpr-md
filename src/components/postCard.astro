@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-const { title, description, pubDate, image, url } = Astro.props;
+const { type, title, description, pubDate, image, url } = Astro.props;
 ---
 
 <article class="w-full">
@@ -11,7 +11,7 @@ const { title, description, pubDate, image, url } = Astro.props;
       <Image
         class="h-full object-cover object-center"
         src={image}
-        loading="lazy"
+        loading={type === "AllPosts" ? "eager" : "lazy"}
         alt="Kendpr"
         height="960"
         width="1280"

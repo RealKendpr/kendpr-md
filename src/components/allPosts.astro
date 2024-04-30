@@ -1,0 +1,28 @@
+---
+const posts = await Astro.glob("../pages/posts/*.mdx");
+import PostCard from "./postCard.astro";
+import dayJs from "dayjs";
+---
+
+{
+  posts
+    .sort(
+      (a, b) =>
+        new Date(b.frontmatter.pubDate).getTime() -
+        new Date(a.frontmatter.pubDate).getTime()
+    )
+    .map((post) =>
+      post.frontmatter.title &&
+      post.frontmatter.description &&
+      post.frontmatter.image ? (
+        <PostCard
+          type="AllPosts"
+          url={post.url}
+          title={post.frontmatter.title}
+          description={post.frontmatter.description}
+          image={post.frontmatter.image}
+          pubDate={dayJs(post.frontmatter.pubDate).format("ddd, D YYYY")}
+        />
+      ) : null
+    )
+}

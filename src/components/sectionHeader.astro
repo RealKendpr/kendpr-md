@@ -1,13 +1,19 @@
 ---
 import Linkout from "./icons/linkout.astro";
 
-const { title, linkText, linkUrl } = Astro.props;
+const { type, title, linkText, linkUrl } = Astro.props;
 ---
 
 <div
   class="relative mb-6 flex items-center justify-between px-4 after:absolute after:bottom-[-35%] after:left-0 after:block after:h-px after:w-full after:bg-neutral-200 after:dark:bg-neutral-700"
 >
-  <h2 class="text-lg">{title}</h2>
+  {
+    type === "OnlySection" ? (
+      <h1 class="text-3xl font-bold">{title}</h1>
+    ) : (
+      <h2 class="text-lg">{title}</h2>
+    )
+  }
   {
     linkText && linkUrl ? (
       <a
