@@ -135,7 +135,16 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		"projects": {
+		"about": {
+"about.mdx": {
+	id: "about.mdx";
+  slug: "about";
+  body: string;
+  collection: "about";
+  data: any
+} & { render(): Render[".mdx"] };
+};
+"projects": {
 "projects.mdx": {
 	id: "projects.mdx";
   slug: "projects";
