@@ -23,8 +23,8 @@ const { title, paddingTop, wrapsBlogPost } = Astro.props;
     <Navigation client:idle />
     <div
       data-paddingtop={paddingTop == "true" ? "true" : "false"}
-      data-wrapsBlogPost={wrapsBlogPost === "true" ? "true" : "false"}
-      class="*:data-paddingtop:pt-20 lg:data-wrapsBlogPost:gap-x-5 lg:data-wrapsBlogPost:px-10 w-full lg:grid lg:grid-cols-[1fr,_640px,_1fr]"
+      data-wrapsblogpost={wrapsBlogPost === "true" ? "true" : "false"}
+      class="*:data-paddingtop:pt-20 lg:data-wrapsblogpost:gap-x-5 lg:data-wrapsblogpost:px-10 w-full lg:grid lg:grid-cols-[1fr,_640px,_1fr]"
     >
       <slot />
     </div>

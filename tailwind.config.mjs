@@ -31,7 +31,7 @@ export default {
     },
     data: {
       paddingtop: "paddingtop='true'",
-      wrapsBlogPost: "wrapsBlogPost='true'",
+      wrapsblogpost: "wrapsblogpost='true'",
     },
   },
   plugins: [require("@tailwindcss/typography")],
