@@ -7,12 +7,10 @@ import Column from "../../layout/column.astro";
 
 <MainLayout title="Kendpr's Posts" paddingTop="true">
   <Column>
-    <main>
-      <section
-        class="border-y-neutral-400 pb-16 maxSm:border-b dark:border-y-neutral-700"
-      >
+    <main class="border-bottom">
+      <section>
         <SectionHeader type="OnlySection" title="Posts" />
-        <div class="grid gap-y-10 prose-headings:font-bold">
+        <div class="grid gap-y-10">
           <AllPosts />
         </div>
       </section>
