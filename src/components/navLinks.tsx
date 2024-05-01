@@ -4,10 +4,10 @@ export function NavLinks({
   setDialogStatus: React.Dispatch<React.SetStateAction<string>> | null;
 }) {
   const linkList = [
-    { url: "/#about", text: "About Me" },
-    { url: "/posts", text: "Posts" },
+    { url: "/kendpr-md/#about", text: "About Me" },
+    { url: "/kendpr-md/posts", text: "Posts" },
     { url: "#contact", text: "Contact" },
-    { url: "/#works", text: "Works" },
+    { url: "/kendpr-md/#works", text: "Works" },
   ];
 
   return (
