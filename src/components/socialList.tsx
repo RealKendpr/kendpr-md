@@ -1,39 +1,34 @@
+import github from "../assets/icons/github-icon.svg";
+import linkedIn from "../assets/icons/linkedin-icon.svg";
+import fiverr from "../assets/icons/fiverr-icon.svg";
+
+const social = [
+  {
+    url: "https://github.com/RealKendpr/",
+    text: "Github",
+    icon: github.src,
+  },
+  {
+    url: "https://www.linkedin.com/in/kendpr/",
+    text: "Linkedin",
+    icon: linkedIn.src,
+  },
+  {
+    url: "https://www.fiverr.com/kendpr/",
+    text: "Fiverr",
+    icon: fiverr.src,
+  },
+];
 export function SocialList() {
   return (
     <ul className="flex gap-x-4 *:duration-150 *:ease-in-out">
-      <li className="squish w-8">
-        <a href="https://github.com/RealKendpr">
-          <picture>
-            <source
-              srcSet="/kendpr-md/assets/icons/github-icon-dark.svg"
-              media="(prefers-color-scheme: dark)"
-            />
-            <img
-              loading="lazy"
-              src="/kendpr-md/assets/icons/github-icon-light.svg"
-              alt="Github"
-            />
-          </picture>
-        </a>
-      </li>
-      <li className="squish w-8">
-        <a href="https://www.linkedin.com/in/kendpr/">
-          <img
-            loading="lazy"
-            src="/kendpr-md/assets/icons/linkedin-icon.svg"
-            alt="Linkedin"
-          />
-        </a>
-      </li>
-      <li className="squish w-8">
-        <a href="https://www.fiverr.com/kendpr">
-          <img
-            loading="lazy"
-            src="/kendpr-md/assets/icons/fiverr-icon.svg"
-            alt="Fiverr"
-          />
-        </a>
-      </li>
+      {social.map((i) => (
+        <li key={i.text} className="squish w-8">
+          <a href={i.url}>
+            <img src={i.icon} alt={i.text} />
+          </a>
+        </li>
+      ))}
     </ul>
   );
 }
