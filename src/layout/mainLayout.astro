@@ -18,13 +18,13 @@ const { title, paddingTop, wrapsBlogPost } = Astro.props;
     <title>{title}</title>
   </head>
   <body
-    class="select-a select-li select-p select-headings select-imgs grid min-h-dvh grid-rows-[1fr,_auto] overflow-x-hidden bg-neutral-400 font-display dark:bg-neutral-900"
+    class="select-a select-li select-p select-headings select-imgs grid min-h-dvh grid-rows-[1fr,_auto] overflow-x-hidden bg-neutral-400 font-display maxSm:grid-cols-1 dark:bg-neutral-900"
   >
     <Navigation client:idle />
     <div
       data-paddingtop={paddingTop == "true" ? "true" : "false"}
       data-wrapsblogpost={wrapsBlogPost === "true" ? "true" : "false"}
-      class="*:data-paddingtop:pt-20 lg:data-wrapsblogpost:gap-x-5 lg:data-wrapsblogpost:px-10 w-full lg:grid lg:grid-cols-[1fr,_640px,_1fr]"
+      class="w-full *:data-paddingtop:pt-20 lg:grid lg:grid-cols-[1fr,_640px,_1fr] lg:data-wrapsblogpost:gap-x-5 lg:data-wrapsblogpost:px-10"
     >
       <slot />
     </div>
