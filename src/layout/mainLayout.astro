@@ -18,7 +18,7 @@ const { title, paddingTop, wrapsBlogPost } = Astro.props;
     <title>{title}</title>
   </head>
   <body
-    class="grid min-h-dvh grid-rows-[1fr,auto] overflow-x-hidden bg-neutral-400 font-display prose-headings:text-neutral-800 prose-p:text-neutral-700 prose-a:text-neutral-700 prose-a:duration-200 prose-a:ease-in-out hover:prose-a:text-accent-light hover:prose-a:underline prose-li:text-neutral-700 prose-img:pointer-events-none prose-img:select-none dark:bg-neutral-900 dark:prose-headings:text-neutral-400 dark:prose-p:text-neutral-500 dark:prose-a:text-neutral-500 dark:hover:prose-a:text-accent-dark dark:prose-li:text-neutral-500"
+    class="select-a select-li select-p select-headings select-imgs grid min-h-dvh grid-rows-[1fr,_auto] overflow-x-hidden bg-neutral-400 font-display dark:bg-neutral-900"
   >
     <Navigation client:idle />
     <div
