@@ -26,10 +26,13 @@ const card = {
         <div class="relative flex items-center gap-x-4 after:absolute after:bottom-[-35%] after:h-px after:w-full after:bg-neutral-200 after:dark:bg-neutral-700">
           <picture class="h-10 w-10">
             <source
-              srcset={card.type.frontmatter.iconDarkMode}
+              srcset={`/kendpr-md${card.type.frontmatter.iconDarkMode}`}
               media="(prefers-color-scheme: dark)"
             />
-            <img src={card.type.frontmatter.iconLightMode} alt="" />
+            <img
+              src={`/kendpr-md${card.type.frontmatter.iconLightMode}`}
+              alt=""
+            />
           </picture>
           <h2>{card.type.frontmatter.title}</h2>
         </div>

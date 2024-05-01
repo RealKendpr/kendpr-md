@@ -5,12 +5,12 @@ export function SocialList() {
         <a href="https://github.com/RealKendpr">
           <picture>
             <source
-              srcSet="/assets/icons/github-icon-dark.svg"
+              srcSet="/kendpr-md/assets/icons/github-icon-dark.svg"
               media="(prefers-color-scheme: dark)"
             />
             <img
               loading="lazy"
-              src="/assets/icons/github-icon-light.svg"
+              src="/kendpr-md/assets/icons/github-icon-light.svg"
               alt="Github"
             />
           </picture>
@@ -20,7 +20,7 @@ export function SocialList() {
         <a href="https://www.linkedin.com/in/kendpr/">
           <img
             loading="lazy"
-            src="/assets/icons/linkedin-icon.svg"
+            src="/kendpr-md/assets/icons/linkedin-icon.svg"
             alt="Linkedin"
           />
         </a>
@@ -29,7 +29,7 @@ export function SocialList() {
         <a href="https://www.fiverr.com/kendpr">
           <img
             loading="lazy"
-            src="/assets/icons/fiverr-icon.svg"
+            src="/kendpr-md/assets/icons/fiverr-icon.svg"
             alt="Fiverr"
           />
         </a>

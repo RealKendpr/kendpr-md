@@ -10,7 +10,11 @@ import Thumbnail from "../components/thumbnail.astro";
     class="mt-20 grid gap-y-10 border-y-neutral-400 pb-16 prose-headings:font-bold maxSm:border-b dark:border-y-neutral-700"
   >
     <header>
-      <Thumbnail loading="eager" src={frontmatter.image} />
+      <Thumbnail
+        loading="eager"
+        alt={frontmatter.title}
+        src={frontmatter.image}
+      />
       <div class="mt-5">
         <time
           class="text-xs text-neutral-800 dark:text-neutral-400"
