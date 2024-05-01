@@ -3,7 +3,10 @@ layout: ../../layout/postLayout.astro
 title: My First Post
 description: I have to post atleast one.
 pubDate: May 1, 2024 11:00 AM
-image: /assets/thumbnails/city.webp
+image:
+  internal: true
+  src: ../pages/posts/assets/thumbnails/city.webp
+draft: false
 ---
 
 I have to make a post because I am using Astro's `Astro.glob()` to find all the posts. And Astro just would not build if `Astro.glob()` found nothing in the specified file path.
