@@ -3,6 +3,16 @@
 @import "tailwindcss/utilities";
 
 @layer base {
+  article pre {
+    @apply mb-7 rounded-xl px-4 py-6;
+    box-shadow: inset 0 0 0 1px hsla(0, 0%, 100%, 0.1);
+  }
+  article p > code {
+    @apply rounded bg-[#17191e] px-[3px] py-[2px] text-[#eef0f9];
+  }
+  article pre code {
+    @apply text-sm;
+  }
   .border-bottom {
     @apply border-y-neutral-400 pb-16 maxSm:border-b dark:border-y-neutral-700;
   }
@@ -10,7 +20,7 @@
     @apply prose-headings:font-bold prose-headings:text-neutral-800 dark:prose-headings:text-neutral-400;
   }
   .select-p {
-    @apply prose-p:text-neutral-700 dark:prose-p:text-neutral-500;
+    @apply prose-p:text-neutral-800 dark:prose-p:text-neutral-500;
   }
   .select-a {
     @apply prose-a:text-neutral-700 prose-a:duration-200 prose-a:ease-in-out hover:prose-a:text-accent-light hover:prose-a:underline dark:prose-a:text-neutral-500  dark:hover:prose-a:text-accent-dark;

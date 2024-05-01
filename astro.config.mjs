@@ -7,6 +7,11 @@ import mdx from "@astrojs/mdx";
 // https://astro.build/config
 export default defineConfig({
   integrations: [react(), tailwind({ applyBaseStyles: false }), mdx()],
+  markdown: {
+    shikiConfig: {
+      theme: "houston",
+    },
+  },
   site: "https://realkendpr.github.io",
   base: "kendpr-md",
 });
