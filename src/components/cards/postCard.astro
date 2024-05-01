@@ -1,22 +1,11 @@
 ---
-import { Image } from "astro:assets";
+import Thumbnail from "../thumbnail.astro";
 const { title, description, pubDate, image, url } = Astro.props;
 ---
 
 <article class="w-full">
   <figure>
-    <div
-      class="aspect-[16/4] w-full overflow-hidden rounded-lg border border-neutral-200 dark:border-neutral-700"
-    >
-      <Image
-        class="h-full object-cover object-center"
-        src={image}
-        loading="lazy"
-        alt="Kendpr"
-        height="960"
-        width="1280"
-      />
-    </div>
+    <Thumbnail src={image} loading="lazy" />
     <figcaption class="group mb-2 mt-4 flex items-center justify-between">
       <a class="hidden font-bold group-hover:inline-block" href={url}>{title}</a
       >

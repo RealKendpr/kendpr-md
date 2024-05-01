@@ -1,0 +1,30 @@
+---
+import { Image } from "astro:assets";
+const { src, loading } = Astro.props;
+---
+
+<div
+  class="aspect-[16/4] w-full overflow-hidden rounded-lg border border-neutral-200 dark:border-neutral-700"
+>
+  <Image
+    class="h-full object-cover object-center"
+    src={src}
+    loading={loading}
+    alt="Kendpr"
+    height="960"
+    width="1280"
+  />
+</div>
+
+<!-- <div
+      class="aspect-[16/4] w-full overflow-hidden rounded-lg border border-neutral-200 dark:border-neutral-700"
+    >
+      <Image
+        class="h-full object-cover object-center"
+        src={image}
+        loading="lazy"
+        alt="Kendpr"
+        height="960"
+        width="1280"
+      />
+    </div> -->
