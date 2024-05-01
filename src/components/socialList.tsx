@@ -25,7 +25,7 @@ export function SocialList() {
       {social.map((i) => (
         <li key={i.text} className="squish w-8">
           <a href={i.url}>
-            <img src={i.icon} alt={i.text} />
+            <img loading="lazy" src={i.icon} alt={i.text} />
           </a>
         </li>
       ))}
