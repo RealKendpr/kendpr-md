@@ -11,23 +11,24 @@ import Column from "./column.astro";
     <div class="sticky top-20"></div>
   </nav>
   <Column wrapsBlogPost="true">
-    <header class="mb-10">
-      <Thumbnail
-        loading="eager"
-        alt={frontmatter.title}
-        src={frontmatter.image}
-      />
-      <div class="mt-5">
-        <time
-          class="text-xs text-neutral-800 dark:text-neutral-400"
-          datetime={frontmatter.pubDate}
-          >{dayjs(frontmatter.pubDate).format("MMMM D, YYYY")}</time
-        >
+    <main class="border-bottom">
+      <header class="mb-10">
+        <Thumbnail
+          loading="eager"
+          alt={frontmatter.title}
+          internal={frontmatter.image.internal}
+          src={frontmatter.image.src}
+        />
+        <div class="mt-5">
+          <time
+            class="text-xs text-neutral-800 dark:text-neutral-400"
+            datetime={frontmatter.pubDate}
+            >{dayjs(frontmatter.pubDate).format("MMMM D, YYYY")}</time
+          >
 
-        <h1 class="text-3xl">{frontmatter.title}</h1>
-      </div>
-    </header>
-    <main>
+          <h1 class="text-3xl">{frontmatter.title}</h1>
+        </div>
+      </header>
       <article class="grid gap-y-4 prose-ol:list-inside prose-ol:list-decimal">
         <slot />
       </article>

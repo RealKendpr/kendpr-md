@@ -2,7 +2,7 @@
 import { Image } from "astro:assets";
 import MainLayout from "../layout/mainLayout.astro";
 import SkillCards from "../components/cards/SkillCards.astro";
-import { Content as About } from "../content/about.mdx";
+import { Content as About } from "../content/about/about.mdx";
 import Projects from "../components/sections/projects.astro";
 import LatestPosts from "../components/sections/latestPosts.astro";
 import Column from "../layout/column.astro";
@@ -15,7 +15,7 @@ import Column from "../layout/column.astro";
         <div class="h-[300px] w-[300px]">
           <Image
             class="h-full object-contain object-left"
-            src={"/kendpr-md/assets/images/peek.png"}
+            src={import("../assets/images/peek.png")}
             loading="eager"
             alt="Kendpr"
             height="300"
