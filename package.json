@@ -1,6 +1,6 @@
 {
-  "name": "kendpr-md-portfolio_react",
-  "version": "1.0.0",
+  "name": "kendpr-md-portfolio",
+  "version": "3.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "preview": "astro preview"
   },
   "keywords": [],
-  "author": "",
+  "author": "Kendpr",
   "license": "ISC",
   "dependencies": {
     "@astrojs/mdx": "^2.3.1",

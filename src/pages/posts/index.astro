@@ -5,12 +5,14 @@ import SectionHeader from "../../components/sections/sectionHeader.astro";
 ---
 
 <MainLayout title="Kendpr's Posts">
-  <section
-    class="mt-20 border-y-neutral-400 pb-16 maxSm:border-b dark:border-y-neutral-700"
-  >
-    <SectionHeader type="OnlySection" title="Posts" />
-    <div class="grid gap-y-10 prose-headings:font-bold">
-      <AllPosts />
-    </div>
-  </section>
+  <main>
+    <section
+      class="mt-20 border-y-neutral-400 pb-16 maxSm:border-b dark:border-y-neutral-700"
+    >
+      <SectionHeader type="OnlySection" title="Posts" />
+      <div class="grid gap-y-10 prose-headings:font-bold">
+        <AllPosts />
+      </div>
+    </section>
+  </main>
 </MainLayout>
