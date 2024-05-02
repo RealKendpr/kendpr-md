@@ -5,7 +5,7 @@ description: I have to post atleast one.
 pubDate: May 1, 2024 11:00 AM
 image:
   internal: true
-  src: ../pages/posts/assets/thumbnails/city.webp
+  src: /assets/thumbnails/city.webp
 draft: false
 ---
 
@@ -18,11 +18,22 @@ I realize that my post layout need more styling.
 
 Maybe I will just add a lorem ipsum down below.
 
+## Code
+
+```css
+article p > code {
+  @apply rounded bg-[#17191e] px-[3px] py-[2px] text-[#eef0f9];
+}
+article pre code {
+  @apply text-sm;
+}
+```
+
 ## Lorem Ipsum
 
 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam tempora officiis doloremque cupiditate modi minima, illo quia necessitatibus iusto aliquam dolore doloribus autem dolores animi nobis? Iusto quos nihil quo neque odio sunt at illum vitae eveniet! Praesentium, sunt maxime error illo ab possimus repellendus dignissimos iste, ut quo accusantium quae dolor.
 
-Cum aliquid quod natus labore itaque, nemo adipisci iste voluptatem eligendi harum dolorum ducimus necessitatibus quo doloremque eaque excepturi fugiat iusto numquam id nostrum voluptates inventore. Minima sunt non pariatur, ea ducimus nihil inventore laudantium corporis natus, dignissimos sed quia ipsum maxime doloremque distinctio! Ex consequatur nihil fuga.
+Cum aliquid quod natus labore itaque, nemo adipisci iste voluptatem eligendi harum dolorum ducimus necessitatibus quo doloremque eaque excepturi fugiat iusto numquam id nostrum voluptates inventore. Minima sunt non pariatur, ea ducimus nihil inventore laudantium corporis natus, dignissimos sed quia ipsum maxime doloremque distinctio! Ex consequatur nihil fuga [I'd just add a link](#).
 
 ### And now a List:
 
@@ -32,3 +43,8 @@ Cum aliquid quod natus labore itaque, nemo adipisci iste voluptatem eligendi har
 - Buffalo
 - Bird
 - Cat
+
+```js
+import { defineConfig } from "astro/config";
+console.log("Hello World");
+```
