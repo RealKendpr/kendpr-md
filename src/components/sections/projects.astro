@@ -22,7 +22,7 @@ import Linkout from "../icons/linkout.astro";
             <Linkout size="size-10" />
           </span>
           <Image
-            src={import(i.img)}
+            src={`${import.meta.env.BASE_URL}${i.img}`}
             alt={i.alt}
             width={1920}
             height={1280}
