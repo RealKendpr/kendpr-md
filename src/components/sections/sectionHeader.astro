@@ -16,11 +16,7 @@ const { type, title, linkText, linkUrl } = Astro.props;
   }
   {
     linkText && linkUrl ? (
-      <a
-        class="flex items-center gap-x-2 text-sm"
-        href={linkUrl}
-        target="_blank"
-      >
+      <a class="flex items-center gap-x-2 text-sm" href={linkUrl}>
         {linkText}
         <Linkout />
       </a>

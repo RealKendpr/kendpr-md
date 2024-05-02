@@ -17,6 +17,9 @@ const card = {
     }
   },
 };
+// console.log(
+//   `${import.meta.env.BASE_URL}${card.type?.frontmatter.iconDarkMode}`
+// );
 ---
 
 {
@@ -26,11 +29,11 @@ const card = {
         <div class="relative flex items-center gap-x-4 after:absolute after:bottom-[-35%] after:h-px after:w-full after:bg-neutral-200 after:dark:bg-neutral-700">
           <picture class="h-10 w-10">
             <source
-              srcset={`/kendpr-md${card.type.frontmatter.iconDarkMode}`}
+              srcset={`${import.meta.env.BASE_URL}${card.type.frontmatter.iconDarkMode}`}
               media="(prefers-color-scheme: dark)"
             />
             <img
-              src={`/kendpr-md${card.type.frontmatter.iconLightMode}`}
+              src={`${import.meta.env.BASE_URL}${card.type.frontmatter.iconLightMode}`}
               alt=""
             />
           </picture>

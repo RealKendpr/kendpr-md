@@ -13,5 +13,5 @@ export default defineConfig({
     },
   },
   site: "https://realkendpr.github.io",
-  base: "kendpr-md",
+  base: "/kendpr-md",
 });
