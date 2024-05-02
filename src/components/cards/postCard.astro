@@ -11,7 +11,7 @@ const { title, description, pubDate, image, url } = Astro.props;
       alt={title}
       loading="lazy"
     />
-    <figcaption class="group mb-2 mt-4 flex items-center justify-between">
+    <figcaption class="group mx-2 mt-4 flex items-center justify-between">
       <a class="hidden font-bold group-hover:inline-block" href={url}>{title}</a
       >
       <h3 class="group-hover:hidden">{title}</h3>
@@ -20,8 +20,8 @@ const { title, description, pubDate, image, url } = Astro.props;
         datetime={pubDate}>{pubDate}</time
       >
     </figcaption>
-    <p class="line-clamp-2 !text-sm">
-      {description}
-    </p>
   </figure>
+  <p class="mx-2 line-clamp-2 !text-sm">
+    {description}
+  </p>
 </article>

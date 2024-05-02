@@ -5,15 +5,21 @@ import { Navigation } from "../components/navigation/navigation";
 const { title, paddingTop, wrapsBlogPost } = Astro.props;
 ---
 
-<!-- why tailwind classes are kind of duplicated in astro -->
 <html class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="shortcut icon"
-      href="/kendpr-md/assets/icons/logo-is_light.svg"
-      type="image/x-icon"
+      href="/kendpr-md/assets/icons/logo-for-light.svg"
+      type="image/svg+xml"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="shortcut icon"
+      href="/kendpr-md/assets/icons/logo-for-dark.svg"
+      type="image/svg+xml"
+      media="(prefers-color-scheme: dark)"
     />
     <title>{title}</title>
   </head>

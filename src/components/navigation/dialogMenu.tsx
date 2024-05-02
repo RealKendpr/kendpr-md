@@ -28,7 +28,8 @@ export function DialogMenu({
       onClick={() => setDialogStatus("close")}
       ref={dialog}
       className="open:open-dialog fixed inset-0 w-3/4 max-w-screen-xsm rounded-2xl border border-neutral-300 bg-neutral-500 backdrop:bg-neutral-900 backdrop:bg-opacity-50 backdrop:backdrop-blur-md dark:border-neutral-700 dark:bg-neutral-900"
-      title="Dialog Menu"
+      aria-labelledby="Menu"
+      title="Menu"
     >
       <div
         className="flex flex-col-reverse px-[clamp(1rem,_5%,_2rem)] py-4"

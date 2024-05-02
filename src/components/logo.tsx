@@ -1,14 +1,14 @@
+import icondark from "../assets/icons/logo-for-dark.svg";
+import iconlight from "../assets/icons/logo-for-light.svg";
+
 export function Logo({ location }: { location: string }) {
   return (
-    <div className="w-8">
+    <div className="w-6">
       <picture>
-        <source
-          srcSet="/kendpr-md/assets/icons/logo-is_light.svg"
-          media="(prefers-color-scheme: dark)"
-        />
+        <source srcSet={icondark.src} media="(prefers-color-scheme: dark)" />
         <img
           loading={location === "navigation" ? "eager" : "lazy"}
-          src="/kendpr-md/assets/icons/logo-is_dark.svg"
+          src={iconlight.src}
           alt="kendpr Logo"
         />
       </picture>
