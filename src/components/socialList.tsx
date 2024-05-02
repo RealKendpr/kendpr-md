@@ -1,4 +1,4 @@
-import github from "../about/skills/icons/github-icon.svg";
+import github from "../assets/icons/github-icon.svg";
 import linkedIn from "../assets/icons/linkedin-icon.svg";
 import fiverr from "../assets/icons/fiverr-icon.svg";
 

@@ -6,7 +6,7 @@ export function NavLinks({
   const linkList = [
     { url: "/kendpr-md/#about", text: "About Me" },
     { url: "/kendpr-md/posts", text: "Posts" },
-    { url: "#contact", text: "Contact" },
+    // { url: "#contact", text: "Contact" },
     { url: "/kendpr-md/#works", text: "Works" },
   ];
 
