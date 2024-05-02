@@ -8,10 +8,14 @@
     box-shadow: inset 0 0 0 1px hsla(0, 0%, 100%, 0.1);
   }
   article p > code {
-    @apply rounded bg-[#17191e] px-[3px] py-[2px] text-[#eef0f9];
+    @apply rounded  bg-[#17191e] px-[3px] py-[2px] text-sm text-[#54B9FF];
   }
   article pre code {
     @apply text-sm;
+
+    & > *:not(:last-child) {
+      @apply pe-4;
+    }
   }
   .border-bottom {
     @apply border-y-neutral-400 pb-16 maxSm:border-b dark:border-y-neutral-700;
