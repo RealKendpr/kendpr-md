@@ -1,13 +1,13 @@
-import github from "../assets/icons/github-icon.svg";
+// import github from "../assets/icons/github-icon.svg";
 import linkedIn from "../assets/icons/linkedin-icon.svg";
 import fiverr from "../assets/icons/fiverr-icon.svg";
 
 const social = [
-  {
-    url: "https://github.com/RealKendpr/",
-    text: "Github",
-    icon: github.src,
-  },
+  // {
+  //   url: "https://github.com/RealKendpr/",
+  //   text: "Github",
+  //   icon: github.src,
+  // },
   {
     url: "https://www.linkedin.com/in/kendpr/",
     text: "Linkedin",
