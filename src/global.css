@@ -27,10 +27,10 @@
     @apply prose-p:text-neutral-800 dark:prose-p:text-neutral-500;
   }
   .select-a {
-    @apply prose-a:text-neutral-700 prose-a:duration-200 prose-a:ease-in-out hover:prose-a:text-accent-light hover:prose-a:underline dark:prose-a:text-neutral-500  dark:hover:prose-a:text-accent-dark;
+    @apply prose-a:text-neutral-700 prose-a:duration-200 prose-a:ease-in-out hover:prose-a:text-accent-light hover:prose-a:underline focus-visible:prose-a:text-accent-light  focus-visible:prose-a:underline dark:prose-a:text-neutral-500 dark:hover:prose-a:text-accent-dark dark:focus-visible:prose-a:text-accent-dark;
   }
   .select-li {
-    @apply prose-li:text-neutral-700 dark:prose-li:text-neutral-500;
+    @apply prose-li:text-neutral-800 dark:prose-li:text-neutral-500;
   }
   .select-imgs {
     @apply prose-img:pointer-events-none prose-img:select-none;
