@@ -6,7 +6,7 @@ interface Props {
   imgPath: string;
   alt: string;
   loading: "lazy" | "eager" | null;
-  internal: string;
+  internal: boolean;
 }
 
 const fetchImages = import.meta.glob<{ default: ImageMetadata }>(
@@ -18,7 +18,7 @@ const fetchImages = import.meta.glob<{ default: ImageMetadata }>(
   class="aspect-[16/4] w-full overflow-hidden rounded-lg border border-neutral-200 dark:border-neutral-700"
 >
   {
-    internal == "true" && fetchImages[imgPath] ? (
+    internal && fetchImages[imgPath] ? (
       <Image
         class="h-full object-cover object-center"
         src={fetchImages[imgPath]!()}
