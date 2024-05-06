@@ -6,7 +6,7 @@ const { title, description, pubDate, image, url } = Astro.props;
 <article class="w-full">
   <figure>
     <Thumbnail
-      src={image.src}
+      imgPath={image.src}
       internal={image.internal}
       alt={title}
       loading="lazy"

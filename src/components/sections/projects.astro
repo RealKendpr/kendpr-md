@@ -3,6 +3,11 @@ import Image from "astro/components/Image.astro";
 import * as projects from "../../about/projects/projects.mdx";
 import Section from "../../layout/section.astro";
 import Linkout from "../icons/linkout.astro";
+import type { ImageMetadata } from "astro";
+
+const getImage = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/projects/*.{jpeg,jpg}"
+);
 ---
 
 <Section
@@ -17,19 +22,23 @@ import Linkout from "../icons/linkout.astro";
           href={i.link}
           class="group relative grid aspect-video place-items-center overflow-hidden rounded-lg border border-neutral-200 dark:border-neutral-700"
         >
-          <div class="absolute inset-0 h-full w-full bg-accent-dark opacity-0 duration-100 ease-linear group-hover:opacity-50 dark:bg-accent-light" />
-          <span class="absolute m-auto hidden text-neutral-700 group-hover:block dark:text-neutral-400">
+          <div class="absolute inset-0 h-full w-full bg-accent-dark opacity-0 duration-100 ease-linear group-hover:opacity-50 group-focus-visible:opacity-50 dark:bg-accent-light" />
+          <span class="absolute m-auto hidden text-neutral-700 group-hover:block group-focus-visible:block dark:text-neutral-400">
             <Linkout size="size-10" />
           </span>
-          <Image
-            src={`${import.meta.env.BASE_URL}${i.img}`}
-            alt={i.alt}
-            width={1920}
-            height={1280}
-            loading="eager"
-          />
+          {getImage[i.img] ? (
+            <Image
+              src={getImage[i.img]!()}
+              alt={i.alt}
+              width={1920}
+              height={1280}
+              loading="eager"
+            />
+          ) : null}
         </a>
       )
     )
   }
 </Section>
+
+<!-- {console.log(i.img)} -->

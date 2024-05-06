@@ -2,6 +2,7 @@
 import * as FrontEnd from "../../about/skills/front-end.mdx";
 import * as BackEnd from "../../about/skills/back-end.mdx";
 import * as Other from "../../about/skills/other.mdx";
+import Image from "astro/components/Image.astro";
 const cardType: string = Astro.props.type;
 const card = {
   get type() {
@@ -24,16 +25,23 @@ const card = {
     <article class="z-30 rounded-2xl border border-neutral-200 px-6 py-8 prose-h2:text-base dark:border-neutral-700">
       <div class="grid gap-y-6">
         <div class="relative flex items-center gap-x-4 after:absolute after:bottom-[-35%] after:h-px after:w-full after:bg-neutral-200 after:dark:bg-neutral-700">
-          <picture class="h-10 w-10">
-            <source
-              srcset={`${import.meta.env.BASE_URL}${card.type.frontmatter.iconDarkMode}`}
-              media="(prefers-color-scheme: dark)"
-            />
-            <img
-              src={`${import.meta.env.BASE_URL}${card.type.frontmatter.iconLightMode}`}
+          <div class="relative size-10">
+            <Image
+              class="absolute dark:hidden"
+              src={card.type.frontmatter.iconLightMode}
               alt=""
+              width={40}
+              height={40}
+              loading="eager"
             />
-          </picture>
+            <Image
+              src={card.type.frontmatter.iconDarkMode}
+              alt=""
+              width={40}
+              height={40}
+              loading="eager"
+            />
+          </div>
           <h2>{card.type.frontmatter.title}</h2>
         </div>
         <p>{card.type.frontmatter.description}</p>
@@ -42,7 +50,5 @@ const card = {
         <card.type.Content />
       </div>
     </article>
-  ) : (
-    ""
-  )
+  ) : null
 }

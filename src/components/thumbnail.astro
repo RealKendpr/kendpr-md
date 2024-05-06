@@ -1,17 +1,42 @@
 ---
 import Image from "astro/components/Image.astro";
-const { src, alt, loading } = Astro.props;
+const { imgPath, alt, loading, internal } = Astro.props;
+
+interface Props {
+  imgPath: string;
+  alt: string;
+  loading: "lazy" | "eager" | null;
+  internal: string;
+}
+
+const fetchImages = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/thumbnails/*.jpeg"
+);
 ---
 
 <div
   class="aspect-[16/4] w-full overflow-hidden rounded-lg border border-neutral-200 dark:border-neutral-700"
 >
-  <Image
-    class="h-full object-cover object-center"
-    src={`${import.meta.env.BASE_URL}${src}`}
-    loading={loading}
-    alt={alt}
-    height="960"
-    width="1280"
-  />
+  {
+    internal == "true" && fetchImages[imgPath] ? (
+      <Image
+        class="h-full object-cover object-center"
+        src={fetchImages[imgPath]!()}
+        loading={loading}
+        alt={alt}
+        height="960"
+        width="1280"
+      />
+    ) : (
+      // "image not found"
+      <Image
+        class="h-full object-cover object-center"
+        src={imgPath}
+        loading={loading}
+        alt={alt}
+        height="960"
+        width="1280"
+      />
+    )
+  }
 </div>
