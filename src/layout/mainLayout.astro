@@ -4,6 +4,9 @@ import Footer from "../components/footer/footer.astro";
 import { Navigation } from "../components/navigation/navigation";
 const { title, paddingTop, wrapsBlogPost, pageType } = Astro.props;
 
+import logoForDark from "../assets/icons/logo-for-dark.svg";
+import logoForLight from "../assets/icons/logo-for-light.svg";
+
 interface Props {
   title: string;
   paddingTop?: boolean;
@@ -18,13 +21,13 @@ interface Props {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="shortcut icon"
-      href="/kendpr-md/assets/icons/logo-for-light.svg"
+      href={logoForLight.src}
       type="image/svg+xml"
       media="(prefers-color-scheme: light)"
     />
     <link
       rel="shortcut icon"
-      href="/kendpr-md/assets/icons/logo-for-dark.svg"
+      href={logoForDark.src}
       type="image/svg+xml"
       media="(prefers-color-scheme: dark)"
     />
