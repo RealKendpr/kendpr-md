@@ -1,24 +1,37 @@
 export function NavLinks({
+  pageType,
   setDialogStatus,
 }: {
-  setDialogStatus: React.Dispatch<React.SetStateAction<string>> | null;
+  pageType: string;
+  setDialogStatus?: React.Dispatch<React.SetStateAction<string>>;
 }) {
+  const baseUrl = import.meta.env.BASE_URL;
+
   const linkList = [
-    { url: "/kendpr-md/#about", text: "About Me" },
-    { url: "/kendpr-md/posts", text: "Posts" },
+    { url: "/", text: "Home" },
+    { url: "/#about", text: "About Me" },
+    { url: "/posts", text: "Posts" },
     // { url: "#contact", text: "Contact" },
-    { url: "/kendpr-md/#works", text: "Works" },
+    { url: "/#works", text: "Works" },
   ];
 
   return (
     <ul className="grid gap-1 place-self-end">
       {linkList.map((link) => (
-        <li key={link.url}>
+        <li
+          data-iscurrentpage={
+            pageType.toLowerCase() === link.text.toLowerCase()
+              ? "true"
+              : "false"
+          }
+          className="data-iscurrentpage:hidden"
+          key={link.url}
+        >
           <a
             onClick={() => {
               setDialogStatus ? setDialogStatus("close") : null;
             }}
-            href={link.url}
+            href={`${baseUrl}${link.url}`}
           >
             {link.text}
           </a>

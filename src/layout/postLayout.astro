@@ -7,7 +7,12 @@ import Column from "./column.astro";
 import Arrow from "../components/icons/arrow.astro";
 ---
 
-<MainLayout title={frontmatter.title} paddingTop="true" wrapsBlogPost="true">
+<MainLayout
+  title={frontmatter.title}
+  paddingTop={true}
+  wrapsBlogPost={true}
+  pageType=""
+>
   <nav class="relative hidden justify-self-end lg:block">
     <div class="sticky top-20"></div>
   </nav>

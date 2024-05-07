@@ -3,9 +3,11 @@ import { SocialList } from "../socialList";
 import { NavLinks } from "../navLinks";
 
 export function DialogMenu({
+  pageType,
   dialogStatus,
   setDialogStatus,
 }: {
+  pageType: string;
   dialogStatus: string;
   setDialogStatus: React.Dispatch<React.SetStateAction<string>>;
 }) {
@@ -36,7 +38,7 @@ export function DialogMenu({
         onClick={(e) => e.stopPropagation()}
       >
         <div className="last-of-type:prose-ul:mt-4 ">
-          <NavLinks setDialogStatus={setDialogStatus} />
+          <NavLinks pageType={pageType} setDialogStatus={setDialogStatus} />
           <SocialList />
         </div>
         <div className="text-right">

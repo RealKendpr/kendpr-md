@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { DialogMenu } from "./dialogMenu";
 import { Logo } from "../logo";
 
-export function Navigation() {
+export function Navigation({ pageType }: { pageType: string }) {
   const [dialogStatus, setDialogStatus] = useState<string>("close");
 
   useEffect(() => {
@@ -27,6 +27,7 @@ export function Navigation() {
         )}
       </div>
       <DialogMenu
+        pageType={pageType}
         dialogStatus={dialogStatus}
         setDialogStatus={setDialogStatus}
       />

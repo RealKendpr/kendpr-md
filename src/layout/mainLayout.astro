@@ -2,7 +2,14 @@
 import "../global.css";
 import Footer from "../components/footer/footer.astro";
 import { Navigation } from "../components/navigation/navigation";
-const { title, paddingTop, wrapsBlogPost } = Astro.props;
+const { title, paddingTop, wrapsBlogPost, pageType } = Astro.props;
+
+interface Props {
+  title: string;
+  paddingTop?: boolean;
+  wrapsBlogPost?: boolean;
+  pageType: string;
+}
 ---
 
 <html class="scroll-smooth">
@@ -26,14 +33,14 @@ const { title, paddingTop, wrapsBlogPost } = Astro.props;
   <body
     class="select-a select-li select-p select-headings select-imgs grid min-h-dvh grid-rows-[1fr,_auto] overflow-x-hidden bg-neutral-400 font-display maxSm:grid-cols-1 dark:bg-neutral-900"
   >
-    <Navigation client:idle />
+    <Navigation pageType={pageType} client:idle />
     <div
-      data-paddingtop={paddingTop == "true" ? "true" : "false"}
-      data-wrapsblogpost={wrapsBlogPost === "true" ? "true" : "false"}
+      data-paddingtop={paddingTop === true ? "true" : "false"}
+      data-wrapsblogpost={wrapsBlogPost === true ? "true" : "false"}
       class="w-full *:data-paddingtop:pt-20 lg:grid lg:grid-cols-[1fr,_640px,_1fr] lg:data-wrapsblogpost:gap-x-5 lg:data-wrapsblogpost:px-10"
     >
       <slot />
     </div>
-    <Footer />
+    <Footer pageType={pageType} />
   </body>
 </html>

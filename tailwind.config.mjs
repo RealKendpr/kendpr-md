@@ -32,6 +32,7 @@ export default {
     data: {
       paddingtop: "paddingtop='true'",
       wrapsblogpost: "wrapsblogpost='true'",
+      iscurrentpage: "iscurrentpage='true'",
     },
   },
   plugins: [require("@tailwindcss/typography")],
