@@ -4,11 +4,11 @@
 
 @layer base {
   article pre {
-    @apply mb-7 rounded-xl px-4 py-6;
+    @apply mb-7 rounded-xl py-6 pl-4;
     box-shadow: inset 0 0 0 1px hsla(0, 0%, 100%, 0.1);
   }
   article p > code {
-    @apply rounded  bg-[#17191e] px-[3px] py-[2px] text-sm text-[#54B9FF];
+    @apply rounded bg-[#17191e] px-[3px] py-[2px] text-sm text-[#54B9FF];
   }
   article pre code {
     @apply text-sm;
