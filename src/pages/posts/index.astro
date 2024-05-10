@@ -3,17 +3,20 @@ import MainLayout from "../../layout/mainLayout.astro";
 import AllPosts from "../../components/sections/allPosts.astro";
 import SectionHeader from "../../components/sections/sectionHeader.astro";
 import Column from "../../layout/column.astro";
+import Html from "../../layout/html.astro";
 ---
 
-<MainLayout title="Kendpr's Posts" paddingTop={true} pageType="Posts">
-  <Column>
-    <main class="border-bottom">
-      <section>
-        <SectionHeader type="OnlySection" title="Posts" />
-        <div class="grid grid-cols-1 gap-y-10">
-          <AllPosts />
-        </div>
-      </section>
-    </main>
-  </Column>
-</MainLayout>
+<Html title="Kendpr's Posts">
+  <MainLayout paddingTop={true} pageType="Posts">
+    <Column>
+      <main class="border-bottom">
+        <section>
+          <SectionHeader type="OnlySection" title="Posts" />
+          <div class="grid grid-cols-1 gap-y-10">
+            <AllPosts />
+          </div>
+        </section>
+      </main>
+    </Column>
+  </MainLayout>
+</Html>

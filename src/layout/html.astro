@@ -1,0 +1,42 @@
+---
+const { title, forPost, metaTags } = Astro.props;
+
+import logoForDark from "../assets/icons/logo-for-dark.svg";
+import logoForLight from "../assets/icons/logo-for-light.svg";
+import MetaTags from "./metaTags.astro";
+
+interface Props {
+  title: string;
+  forPost?: boolean;
+  metaTags?: {
+    title: string;
+    description: string;
+    image: string;
+    url: URL;
+  };
+}
+---
+
+<html class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href={logoForLight.src}
+      type="image/svg+xml"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="shortcut icon"
+      href={logoForDark.src}
+      type="image/svg+xml"
+      media="(prefers-color-scheme: dark)"
+    />
+    <title>{title}</title>
+    {forPost && metaTags != null ? <MetaTags metaTags={metaTags} /> : null}
+  </head>
+  <slot />
+
+
+</html>
