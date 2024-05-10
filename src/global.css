@@ -38,7 +38,7 @@
   .select-blockquote blockquote {
     @apply border-l-4 border-neutral-700 pl-3;
   }
-  .select-blockquote blockquote:has(p) > p {
+  .select-blockquote blockquote > p {
     @apply text-neutral-700 dark:text-[hsl(268,8%,55%)] !important;
   }
   .squish {
