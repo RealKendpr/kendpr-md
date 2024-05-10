@@ -4,16 +4,11 @@ const { title, forPost, metaTags } = Astro.props;
 import logoForDark from "../assets/icons/logo-for-dark.svg";
 import logoForLight from "../assets/icons/logo-for-light.svg";
 import MetaTags from "./metaTags.astro";
-
+import type { MetaTagProps } from "../type/metaTypes";
 interface Props {
   title: string;
   forPost?: boolean;
-  metaTags?: {
-    title: string;
-    description: string;
-    image: URL;
-    url: URL;
-  };
+  metaTags?: MetaTagProps;
 }
 ---
 

@@ -6,13 +6,14 @@ import Thumbnail from "../components/thumbnail.astro";
 import Column from "./column.astro";
 import Arrow from "../components/icons/arrow.astro";
 import Html from "./html.astro";
-const metaTags = {
+import type { MetaTagProps } from "../type/metaTypes";
+
+const metaTags: MetaTagProps = {
   title: frontmatter.title,
   description: frontmatter.description,
-  image: new URL(frontmatter.image.src, Astro.url),
+  image: frontmatter.image,
   url: Astro.url,
 };
-// const socialImageURL = new URL(frontmatter.image.src, Astro.url);
 ---
 
 <Html title={frontmatter.title} forPost={true} metaTags={metaTags}>
