@@ -9,9 +9,10 @@ import Html from "./html.astro";
 const metaTags = {
   title: frontmatter.title,
   description: frontmatter.description,
-  image: frontmatter.image.src,
+  image: new URL(frontmatter.image.src, Astro.url),
   url: Astro.url,
 };
+// const socialImageURL = new URL(frontmatter.image.src, Astro.url);
 ---
 
 <Html title={frontmatter.title} forPost={true} metaTags={metaTags}>
