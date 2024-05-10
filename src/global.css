@@ -35,6 +35,12 @@
   .select-imgs {
     @apply prose-img:pointer-events-none prose-img:select-none;
   }
+  .select-blockquote blockquote {
+    @apply border-l-4 border-neutral-700 pl-3;
+  }
+  .select-blockquote blockquote:has(p) > p {
+    @apply text-neutral-700 dark:text-[hsl(268,8%,55%)] !important;
+  }
   .squish {
     @apply focus-within:scale-x-75 focus-within:scale-y-125 hover:scale-x-75 hover:scale-y-125;
   }
