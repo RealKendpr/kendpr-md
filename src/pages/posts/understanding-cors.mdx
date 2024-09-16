@@ -1,0 +1,48 @@
+layout: ../../layout/postLayout.astro
+title: Cross-Origin Resource Sharing (CORS)
+description: I recently made my first API, and when making an API, you need to configure CORS, or Cross-Origin Resource Sharing, when you deploy it online.
+pubDate: September 16, 2024 3:25 PM
+image: https://images.unsplash.com/photo-1649144974269-2cfed23287e1
+
+# Understanding Cross-Origin Resource Sharing (CORS) for an API
+
+I recently made my first API, and when making an API, you need to configure CORS, or Cross-Origin Resource Sharing, when you deploy it online. Basically, you need to specify which website or domain can make a request to the API, for example "https://example.com".
+
+But when you are developing locally on your own computer, you don't necessarily need to specify which website can access it since you just make your request using "http://localhost:<port-number>", but sooner or later you're still going to want to host your API online, so you're going to need to setup CORS.
+
+## Setting Up CORS in Node.js with Express
+
+1. Install cors middleware using `npm install cors`
+2. Inside the index.js:
+
+```js
+app.use(
+  cors({
+    origin: "https://memarandom.onrender.com", //specify the allowed origin
+  }),
+);
+```
+
+Origin is where you specify what domains can make a request to the API; it can also take multiple origins.
+
+**Allowing Multiple Origins**
+
+To allow multiple origins, you have to make an array of origins as a string:
+
+```js
+origin: ["https://memarandom.onrender.com", "https://your-website.com"],
+```
+
+**Open Access for public APIs**
+
+If you are making an API that is open for the public or that you want any websites to make a `GET` request, you can use an asterisk "\*,"  called a wildcard, to allow all websites:
+
+```js
+origin: "*",
+```
+
+**Caution**
+You need to be very careful when using it, as it can lead to a potential security risk because you know it's an "aste--RISK".
+
+Anyway, the API I just made is memarandom; it generates random memes from the memes that I have personally seen and laughed at. <br/>
+If you have any corrections to this blog, please contact me or open an issue in the [git repository](https://github.com/RealKendpr/kendpr-md/issues).
