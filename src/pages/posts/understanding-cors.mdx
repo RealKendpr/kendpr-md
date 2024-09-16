@@ -11,9 +11,9 @@ draft: false
 
 # Understanding Cross-Origin Resource Sharing (CORS) for an API
 
-I recently made my first API, and when making an API, you need to configure CORS, or Cross-Origin Resource Sharing, when you deploy it online. Basically, you need to specify which website or domain can make a request to the API, for example "https://example.com".
+I recently made my first API, and when making an API, you need to configure CORS, or Cross-Origin Resource Sharing, when you deploy it online. Basically, you need to specify which website or domain can make a request to the API, for example `https://example.com`.
 
-But when you are developing locally on your own computer, you don't necessarily need to specify which website can access it since you just make your request using "http://localhost:&lt;port-number&gt;", but sooner or later you're still going to want to host your API online, so you're going to need to setup CORS.
+But when you are developing locally on your own computer, you don't necessarily need to specify which website can access it since you just make your request using `http://localhost:port-number`, but sooner or later you're still going to want to host your API online, so you're going to need to setup CORS.
 
 ## Setting Up CORS in Node.js with Express
 
@@ -47,7 +47,7 @@ origin: "*",
 ```
 
 **Caution**
-You need to be very careful when using it, as it can lead to a potential security risk because you know it's an "aste--RISK".
+You need to be very careful when using it, as it can lead to a potential security risk because you know it's an "aste&mdash;RISK".
 
 Anyway, the API I just made is memarandom; it generates random memes from the memes that I have personally seen and laughed at. &lt;br/&gt;
 If you have any corrections to this blog, please contact me or open an issue in the [git repository](https://github.com/RealKendpr/kendpr-md/issues).
