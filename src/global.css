@@ -1,6 +1,24 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import 'tailwindcss';
+
+@config '../tailwind.config.mjs';
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
 
 @layer base {
   article pre {
@@ -8,7 +26,7 @@
     box-shadow: inset 0 0 0 1px hsla(0, 0%, 100%, 0.1);
   }
   article p > code {
-    @apply rounded bg-[#17191e] px-[3px] py-[2px] text-sm text-[#54B9FF];
+    @apply rounded-sm bg-[#17191e] px-[3px] py-[2px] text-sm text-[#54B9FF];
   }
   article pre code {
     @apply text-sm;
@@ -27,7 +45,7 @@
     @apply prose-p:text-neutral-800 dark:prose-p:text-neutral-500;
   }
   .select-a {
-    @apply prose-a:text-neutral-700 prose-a:duration-200 prose-a:ease-in-out hover:prose-a:text-accent-light hover:prose-a:underline focus-visible:prose-a:text-accent-light  focus-visible:prose-a:underline dark:prose-a:text-neutral-500 dark:hover:prose-a:text-accent-dark dark:focus-visible:prose-a:text-accent-dark;
+    @apply prose-a:text-neutral-700 prose-a:duration-200 prose-a:ease-in-out prose-a:hover:text-accent-light prose-a:hover:underline prose-a:focus-visible:text-accent-light  prose-a:focus-visible:underline dark:prose-a:text-neutral-500 dark:prose-a:hover:text-accent-dark dark:prose-a:focus-visible:text-accent-dark;
   }
   .select-li {
     @apply prose-li:text-neutral-800 dark:prose-li:text-neutral-500;
@@ -39,7 +57,7 @@
     @apply border-l-4 border-neutral-700 pl-3;
   }
   .select-blockquote blockquote > p {
-    @apply text-neutral-700 dark:text-[hsl(268,8%,55%)] !important;
+    @apply text-neutral-700! dark:text-[hsl(268,8%,55%)]!;
   }
   .squish {
     @apply focus-within:scale-x-75 focus-within:scale-y-125 hover:scale-x-75 hover:scale-y-125;
