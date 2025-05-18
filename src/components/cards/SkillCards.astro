@@ -29,7 +29,7 @@ const cardMatter = card.type?.frontmatter
   card.type != null ? (
     <article class="z-30 rounded-2xl border border-neutral-200 px-6 py-8 prose-h2:text-base dark:border-neutral-700">
       <div class="grid gap-y-6">
-        <div class="relative flex items-center gap-x-4 after:absolute after:bottom-[-35%] after:h-px after:w-full after:bg-neutral-200 after:dark:bg-neutral-700">
+        <div class="relative flex items-center gap-x-4 after:absolute after:bottom-[-35%] after:h-px after:w-full after:bg-neutral-200 dark:after:bg-neutral-700">
           <div class="size-10">
             {fetchIcons[cardMatter?.iconLightMode] &&
               fetchIcons[cardMatter?.iconDarkMode] ?

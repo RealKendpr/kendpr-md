@@ -29,7 +29,7 @@ export function DialogMenu({
     <dialog
       onClick={() => setDialogStatus("close")}
       ref={dialog}
-      className="open:open-dialog fixed inset-0 w-3/4 max-w-screen-xsm rounded-2xl border border-neutral-300 bg-neutral-500 backdrop:bg-neutral-900 backdrop:bg-opacity-50 backdrop:backdrop-blur-md dark:border-neutral-700 dark:bg-neutral-900"
+      className="open:open-dialog fixed m-auto w-3/4 max-w-[500px] rounded-2xl border border-neutral-300 bg-neutral-500 backdrop:bg-neutral-900/50 backdrop:backdrop-blur-md dark:border-neutral-700 dark:bg-neutral-900"
       aria-labelledby="Menu"
       title="Menu"
     >
@@ -37,7 +37,7 @@ export function DialogMenu({
         className="flex flex-col-reverse px-[clamp(1rem,_5%,_2rem)] py-4"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="last-of-type:prose-ul:mt-4 ">
+        <div className="prose-ul:last-of-type:mt-4">
           <NavLinks pageType={pageType} setDialogStatus={setDialogStatus} />
           <SocialList />
         </div>

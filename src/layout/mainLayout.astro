@@ -1,5 +1,5 @@
 ---
-import "../global.css";
+import "../styles/global.css";
 import Footer from "../components/footer/footer.astro";
 import { Navigation } from "../components/navigation/navigation";
 const { paddingTop, wrapsBlogPost, pageType } = Astro.props;
@@ -12,13 +12,13 @@ interface Props {
 ---
 
 <body
-  class="select-a select-li select-p select-headings select-imgs grid min-h-dvh grid-rows-[1fr,_auto] overflow-x-hidden bg-neutral-400 font-display maxSm:grid-cols-1 dark:bg-neutral-900"
+  class="select-a select-li select-p select-headings select-imgs grid min-h-dvh grid-rows-[1fr__auto] overflow-x-hidden bg-neutral-400 font-display maxSm:grid-cols-1 dark:bg-neutral-900"
 >
   <Navigation pageType={pageType} client:idle />
   <div
     data-paddingtop={paddingTop === true ? "true" : "false"}
     data-wrapsblogpost={wrapsBlogPost === true ? "true" : "false"}
-    class="w-full *:data-paddingtop:pt-20 lg:grid lg:grid-cols-[1fr,_640px,_1fr] lg:data-wrapsblogpost:gap-x-5 lg:data-wrapsblogpost:px-10"
+    class="w-full data-paddingtop:*:pt-20 lg:grid lg:grid-cols-[1fr__640px__1fr] lg:data-wrapsblogpost:gap-x-5 lg:data-wrapsblogpost:px-10"
   >
     <slot />
   </div>
