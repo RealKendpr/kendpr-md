@@ -21,7 +21,7 @@ const posts = await getCollection('posts');
           post.data.description &&
           post.data.image ? (
             <PostCard
-              url={post.filePath}
+              url={post.id}
               title={post.data.title}
               description={post.data.description}
               image={post.data.image}
