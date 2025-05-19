@@ -23,10 +23,7 @@
               "type": "string"
             }
           },
-          "required": [
-            "internal",
-            "src"
-          ],
+          "required": ["internal", "src"],
           "additionalProperties": false
         },
         "draft": {
@@ -36,13 +33,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "title",
-        "description",
-        "pubDate",
-        "image",
-        "draft"
-      ],
+      "required": ["title", "description", "pubDate", "image", "draft"],
       "additionalProperties": false
     }
   },
