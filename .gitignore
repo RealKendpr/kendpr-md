@@ -2,3 +2,4 @@ node_modules
 dist
 test-*.*
 src/pages/posts/template.*
+.astro
