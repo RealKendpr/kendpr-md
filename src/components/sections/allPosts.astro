@@ -13,7 +13,7 @@ const posts = await getCollection("posts");
           new Date(b.data.pubDate).getTime() -
           new Date(a.data.pubDate).getTime(),
       )
-      .map(async (post) => {
+      .map((post) => {
         const item = post.data;
 
         return item.title && item.description && item.image ? (
