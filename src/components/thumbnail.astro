@@ -1,5 +1,5 @@
 ---
-import Image from "astro/components/Image.astro";
+import { Image } from "astro:assets";
 const { imgPath, alt, loading, internal } = Astro.props;
 
 interface Props {
@@ -15,8 +15,7 @@ const fetchImages = import.meta.glob<{ default: ImageMetadata }>(
 ---
 
 <div
-  class="aspect-16/4 overflow-hidden rounded-lg border border-neutral-200 dark:border-neutral-700"
->
+  class="aspect-16/4 overflow-hidden rounded-lg border border-neutral-200 dark:border-neutral-700">
   {
     internal && fetchImages[imgPath] ? (
       <Image
