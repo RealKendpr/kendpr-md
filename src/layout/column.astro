@@ -6,7 +6,7 @@ const { wrapsBlogPost } = Astro.props;
 <>
   <div
     data-wrapsBlogPost={wrapsBlogPost === "true" ? "true" : "false"}
-    class="data-wrapsBlogPost:prose-headings:font-bold col-start-2 w-full max-w-(--breakpoint-sm) bg-neutral-400/20 px-[clamp(16px,5%,32px)] sm:relative sm:mx-auto sm:border-x sm:border-neutral-200 sm:px-14! dark:bg-neutral-900/20 sm:dark:border-neutral-700 backdrop-blur-xs">
+    class="data-wrapsBlogPost:prose-headings:font-bold col-start-2 w-full max-w-(--breakpoint-sm) bg-neutral-900/20 px-[clamp(16px,5%,32px)] backdrop-blur-xs sm:relative sm:mx-auto sm:border-x sm:border-neutral-700 sm:px-14!">
     <slot />
     <FooterBorder />
   </div>
