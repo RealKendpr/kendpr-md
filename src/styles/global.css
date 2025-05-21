@@ -35,19 +35,19 @@
     }
   }
   .border-bottom {
-    @apply maxSm:border-b border-y-neutral-400 pb-16 dark:border-y-neutral-700;
+    @apply maxSm:border-b border-y-neutral-700 pb-16;
   }
   .select-headings {
-    @apply prose-headings:font-bold prose-headings:text-neutral-800 dark:prose-headings:text-neutral-400;
+    @apply prose-headings:font-bold prose-headings:text-neutral-400;
   }
   .select-p {
-    @apply prose-p:text-neutral-800 dark:prose-p:text-neutral-500;
+    @apply prose-p:text-neutral-500;
   }
   .select-a {
-    @apply prose-a:text-neutral-700 prose-a:duration-200 prose-a:ease-in-out prose-a:hover:text-accent-light prose-a:hover:underline prose-a:focus-visible:text-accent-light prose-a:focus-visible:underline dark:prose-a:text-neutral-500 dark:prose-a:hover:text-accent-dark dark:prose-a:focus-visible:text-accent-dark;
+    @apply prose-a:duration-200 prose-a:ease-in-out prose-a:hover:underline prose-a:focus-visible:underline prose-a:text-neutral-500 prose-a:hover:text-accent-dark prose-a:focus-visible:text-accent-dark;
   }
   .select-li {
-    @apply prose-li:text-neutral-800 dark:prose-li:text-neutral-500;
+    @apply prose-li:text-neutral-500;
   }
   .select-imgs {
     @apply prose-img:pointer-events-none prose-img:select-none;
@@ -56,7 +56,7 @@
     @apply border-l-4 border-neutral-700 pl-3;
   }
   .select-blockquote blockquote > p {
-    @apply text-neutral-700! dark:text-[hsl(268,8%,55%)]!;
+    @apply text-[hsl(268,8%,55%)]!;
   }
   .squish {
     @apply focus-within:scale-x-75 focus-within:scale-y-125 hover:scale-x-75 hover:scale-y-125;
@@ -88,7 +88,7 @@
   }
 
   :root {
-    --border-clr: #e9ecef;
+    --border-clr: #495057;
   }
   .fade-border-right {
     border-image: linear-gradient(to right, var(--border-clr), transparent 40%)
@@ -97,11 +97,7 @@
   .fade-border-left {
     border-image: linear-gradient(to left, var(--border-clr), transparent 40%) 1;
   }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --border-clr: #495057;
-    }
-  }
+
   @font-face {
     font-family: "Inter";
     font-weight: 400;

@@ -24,8 +24,7 @@ const metaTags: MetaTagProps = {
     <Column wrapsBlogPost="true">
       <a
         href={`${import.meta.env.BASE_URL}/posts`}
-        class="flex w-fit items-center gap-x-1 rounded-sm border border-neutral-900/15 px-4 py-1.5 text-sm hover:bg-neutral-800/5 hover:text-neutral-800 hover:no-underline dark:border-neutral-400/20 dark:hover:bg-neutral-400/5 dark:hover:text-neutral-100"
-      >
+        class="flex w-fit items-center gap-x-1 rounded-sm border border-neutral-400/20 px-4 py-1.5 text-sm hover:bg-neutral-400/5 hover:text-neutral-100 hover:no-underline">
         <Arrow />
         Back to Posts
       </a>
@@ -39,17 +38,16 @@ const metaTags: MetaTagProps = {
           />
           <div class="mt-5">
             <time
-              class="text-xs text-neutral-800 dark:text-neutral-400"
-              datetime={frontmatter.pubDate}
-              >{dayjs(frontmatter.pubDate).format("MMMM D, YYYY")}</time
-            >
+              class="text-xs text-neutral-400"
+              datetime={frontmatter.pubDate}>
+              {dayjs(frontmatter.pubDate).format("MMMM D, YYYY")}
+            </time>
 
             <h1 class="text-3xl">{frontmatter.title}</h1>
           </div>
         </header>
         <article
-          class="select-blockquote underline-offset-3 leading-relaxed prose-headings:mb-2 prose-h2:text-lg prose-p:mb-7 prose-a:text-accent-light prose-a:underline prose-a:hover:text-neutral-900 prose-a:focus-visible:text-neutral-900 prose-ol:mb-7 prose-ol:list-inside prose-ol:list-decimal prose-ul:mb-7 prose-ul:list-inside prose-ul:list-disc dark:prose-a:text-accent-dark dark:prose-a:hover:text-neutral-200 dark:prose-a:focus-visible:text-neutral-200"
-        >
+          class="select-blockquote prose-headings:mb-2 prose-h2:text-lg prose-p:mb-7 prose-a:underline prose-ol:mb-7 prose-ol:list-inside prose-ol:list-decimal prose-ul:mb-7 prose-ul:list-inside prose-ul:list-disc prose-a:text-accent-dark prose-a:hover:text-neutral-200 prose-a:focus-visible:text-neutral-200 leading-relaxed underline-offset-3">
           <p>{frontmatter.description}</p>
           <slot />
         </article>
