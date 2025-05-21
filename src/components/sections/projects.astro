@@ -23,8 +23,8 @@ const getImage = import.meta.glob<{ default: ImageMetadata }>(
       }) => (
         <a
           href={i.link}
-          class="p-2 rounded-lg border no-underline! hover:bg-accent-light/10 border-neutral-200 dark:border-neutral-700">
-          <div class="overflow-hidden relative grid aspect-video place-items-center mb-2 rounded">
+          class="p-2 xsm:p-8 xsm:rounded-2xl rounded-lg border no-underline! hover:bg-accent-light/10 border-neutral-200 dark:border-neutral-700">
+          <div class="overflow-hidden relative grid aspect-video place-items-center mb-2 rounded xsm:rounded-[.5rem]">
             {getImage[i.img] ? (
               <Image
                 src={getImage[i.img]!()}
