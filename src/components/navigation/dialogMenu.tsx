@@ -34,7 +34,7 @@ export function DialogMenu({
       title="Menu"
     >
       <div
-        className="flex flex-col-reverse px-[clamp(1rem,_5%,_2rem)] py-4"
+        className="flex flex-col-reverse px-[clamp(1rem,5%,2rem)] py-4"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="prose-ul:last-of-type:mt-4">
