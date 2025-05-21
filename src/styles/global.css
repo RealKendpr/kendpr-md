@@ -110,7 +110,7 @@
     src:
       url("/kendpr-md/assets/fonts/inter/Inter-Regular.woff2") format("woff2"),
       url("/kendpr-md/assets/fonts/inter/Inter-Regular.woff") format("woff");
-    font-display: swap;
+    font-display: block;
   }
   @font-face {
     font-family: "Inter";
@@ -118,7 +118,7 @@
     src:
       url("/kendpr-md/assets/fonts/inter/Inter-Medium.woff2") format("woff2"),
       url("/kendpr-md/assets/fonts/inter/Inter-Medium.woff") format("woff");
-    font-display: swap;
+    font-display: block;
   }
   @font-face {
     font-family: "Inter";
@@ -126,7 +126,7 @@
     src:
       url("/kendpr-md/assets/fonts/inter/Inter-SemiBold.woff2") format("woff2"),
       url("/kendpr-md/assets/fonts/inter/Inter-SemiBold.woff") format("woff");
-    font-display: swap;
+    font-display: block;
   }
   @font-face {
     font-family: "Inter";
@@ -134,7 +134,7 @@
     src:
       url("/kendpr-md/assets/fonts/inter/Inter-Bold.woff2") format("woff2"),
       url("/kendpr-md/assets/fonts/inter/Inter-Bold.woff") format("woff");
-    font-display: swap;
+    font-display: block;
   }
   @font-face {
     font-family: "Inter";
@@ -142,6 +142,6 @@
     src:
       url("/kendpr-md/assets/fonts/inter/Inter-Black.woff2") format("woff2"),
       url("/kendpr-md/assets/fonts/inter/Inter-Black.woff") format("woff");
-    font-display: swap;
+    font-display: block;
   }
 }
