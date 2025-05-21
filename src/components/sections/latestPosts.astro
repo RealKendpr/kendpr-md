@@ -1,8 +1,9 @@
 ---
-const posts = await Astro.glob("../../pages/posts/*.mdx");
+import { getCollection } from "astro:content";
 import PostCard from "../cards/postCard.astro";
 import Section from "../../layout/section.astro";
 import dayJs from "dayjs";
+const posts = await getCollection("posts");
 ---
 
 {
@@ -11,22 +12,20 @@ import dayJs from "dayjs";
       {posts
         .sort(
           (a, b) =>
-            new Date(b.frontmatter.pubDate).getTime() -
-            new Date(a.frontmatter.pubDate).getTime()
+            new Date(b.data.pubDate).getTime() -
+            new Date(a.data.pubDate).getTime(),
         )
         .slice(0, 3)
         .map((post) =>
-          post.frontmatter.title &&
-          post.frontmatter.description &&
-          post.frontmatter.image ? (
+          post.data.title && post.data.description && post.data.image ? (
             <PostCard
-              url={post.url}
-              title={post.frontmatter.title}
-              description={post.frontmatter.description}
-              image={post.frontmatter.image}
-              pubDate={dayJs(post.frontmatter.pubDate).format("MMMM D, YYYY")}
+              url={`${import.meta.env.BASE_URL}/${post.id}`}
+              title={post.data.title}
+              description={post.data.description}
+              image={post.data.image}
+              pubDate={dayJs(post.data.pubDate).format("MMMM D, YYYY")}
             />
-          ) : null
+          ) : null,
         )}
     </Section>
   )
