@@ -31,7 +31,7 @@ const getImage = import.meta.glob<{ default: ImageMetadata }>(
                 alt={i.title}
                 width={1920}
                 height={1280}
-                loading="eager"
+                loading="lazy"
               />
             ) : null}
           </div>
