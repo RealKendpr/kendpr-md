@@ -29,13 +29,13 @@ const social: SocialTypes[] = [
       lightmode: linkedIn.src,
     },
   },
-  {
-    url: "https://www.fiverr.com/kendpr/",
-    text: "Fiverr",
-    icon: {
-      lightmode: fiverr.src,
-    },
-  },
+  // {
+  //   url: "https://www.fiverr.com/kendpr/",
+  //   text: "Fiverr",
+  //   icon: {
+  //     lightmode: fiverr.src,
+  //   },
+  // },
   {
     url: "https://twitter.com/kendpr",
     text: "Twitter",
