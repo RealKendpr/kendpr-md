@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets";
 import MainLayout from "../layout/mainLayout.astro";
 import SkillCards from "../components/cards/SkillCards.astro";
 import { Content as About } from "../about/about.mdx";
@@ -7,35 +6,21 @@ import Projects from "../components/sections/projects.astro";
 import LatestPosts from "../components/sections/latestPosts.astro";
 import Column from "../layout/column.astro";
 import Html from "../layout/html.astro";
-import peek from "../assets/images/peek.png";
 ---
 
 <Html title="Kendpr">
   <MainLayout pageType="Home">
     <Column>
-      <header class="grid min-h-dvh content-center">
-        <figure>
-          <div class="h-[400px] w-[400px]">
-            <Image
-              class="h-full object-contain object-left"
-              src={peek}
-              loading="eager"
-              alt="Kendpr"
-              height={peek.height}
-              width={peek.width}
-            />
-          </div>
-          <figcaption>
-            <h1 class="text-4xl">Hi, Im Ken</h1>
-            <p id="about">Front-end Web Developer</p>
-          </figcaption>
-        </figure>
+      <header class="grid min-h-[calc(100dvh-175px)] content-center">
+        <h1 class="text-4xl tracking-tighter text-balance">
+          Building fast and responsive websites.
+        </h1>
       </header>
       <main
         class="mx-auto grid max-w-(--breakpoint-xsm) justify-items-center gap-y-20 border-t border-y-neutral-200 pb-16 pt-8 maxSm:border-b dark:border-y-neutral-700"
       >
         <section
-          class="prose-h2:text-base first-of-type:prose-p:mb-3 first-of-type:prose-p:mt-1"
+          class="prose-h2:text-3xl first-of-type:prose-p:mb-3 first-of-type:prose-p:mt-8 prose-p:text-lg/7 prose-h2:font-semibold!"
         >
           <About />
         </section>
