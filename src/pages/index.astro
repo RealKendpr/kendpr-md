@@ -12,8 +12,11 @@ import Html from "../layout/html.astro";
   <MainLayout pageType="Home">
     <Column>
       <header class="grid min-h-[calc(100dvh-175px)] content-center">
-        <h1 class="text-4xl tracking-tight text-balance">
-          Building fast and responsive websites.
+        <h1 class="text-4xl tracking-tight text-balance flex">
+          <span class="text-2xl select-none" aria-hidden="true">
+            &gt;&nbsp;
+          </span>
+          <span>Building fast and responsive websites.</span>
         </h1>
       </header>
       <main
