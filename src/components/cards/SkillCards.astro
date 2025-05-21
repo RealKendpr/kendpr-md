@@ -20,36 +20,26 @@ const card = {
   },
 };
 const fetchIcons = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/about/skills/icons/headerIcon/*.svg"
+  "/src/about/skills/icons/headerIcon/*.svg",
 );
-const cardMatter = card.type?.frontmatter
+const cardMatter = card.type?.frontmatter;
 ---
 
 {
   card.type != null ? (
-    <article class="rounded-2xl border border-neutral-200 px-6 py-8 prose-h2:text-base dark:border-neutral-700">
+    <article class="prose-h2:text-base rounded-2xl border border-neutral-700 px-6 py-8">
       <div class="grid gap-y-6">
-        <div class="relative flex items-center gap-x-4 after:absolute after:bottom-[-35%] after:h-px after:w-full after:bg-neutral-200 dark:after:bg-neutral-700">
+        <div class="relative flex items-center gap-x-4 after:absolute after:bottom-[-35%] after:h-px after:w-full after:bg-neutral-700">
           <div class="size-10">
-            {fetchIcons[cardMatter?.iconLightMode] &&
-              fetchIcons[cardMatter?.iconDarkMode] ?
+            {fetchIcons[cardMatter?.iconDarkMode] ? (
               <Image
-              class="dark:hidden"
-              src={fetchIcons[cardMatter?.iconLightMode]!()}
-              alt=""
-              width={40}
-              height={40}
-              loading="lazy"
+                src={fetchIcons[cardMatter?.iconDarkMode]!()}
+                alt=""
+                width={40}
+                height={40}
+                loading="lazy"
               />
-              <Image
-              class="dark:block hidden"
-              src={fetchIcons[cardMatter?.iconDarkMode]!()}
-              alt=""
-              width={40}
-              height={40}
-              loading="lazy"
-              /> : null
-            }
+            ) : null}
           </div>
           <h2>{cardMatter?.title}</h2>
         </div>

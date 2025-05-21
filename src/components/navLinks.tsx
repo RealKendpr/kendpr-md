@@ -25,14 +25,12 @@ export function NavLinks({
               : "false"
           }
           className="data-iscurrentpage:hidden"
-          key={link.url}
-        >
+          key={link.url}>
           <a
             onClick={() => {
               setDialogStatus ? setDialogStatus("close") : null;
             }}
-            href={`${baseUrl}${link.url}`}
-          >
+            href={`${baseUrl}${link.url}`}>
             {link.text}
           </a>
         </li>

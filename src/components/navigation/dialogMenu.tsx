@@ -29,14 +29,12 @@ export function DialogMenu({
     <dialog
       onClick={() => setDialogStatus("close")}
       ref={dialog}
-      className="open:open-dialog fixed m-auto w-3/4 max-w-[500px] rounded-2xl border border-neutral-300 bg-neutral-500 backdrop:bg-neutral-900/50 backdrop:backdrop-blur-md dark:border-neutral-700 dark:bg-neutral-900"
+      className="open:open-dialog fixed m-auto w-3/4 max-w-[500px] rounded-2xl border border-neutral-700 bg-neutral-900 backdrop:bg-neutral-900/50 backdrop:backdrop-blur-md"
       aria-labelledby="Menu"
-      title="Menu"
-    >
+      title="Menu">
       <div
         className="flex flex-col-reverse px-[clamp(1rem,5%,2rem)] py-4"
-        onClick={(e) => e.stopPropagation()}
-      >
+        onClick={(e) => e.stopPropagation()}>
         <div className="prose-ul:last-of-type:mt-4">
           <NavLinks pageType={pageType} setDialogStatus={setDialogStatus} />
           <SocialList />
@@ -45,8 +43,7 @@ export function DialogMenu({
           <button
             className="squish duration-150 ease-in-out"
             onClick={() => setDialogStatus("close")}
-            aria-labelledby="Close Button"
-          >
+            aria-labelledby="Close Button">
             &#10060;
           </button>
         </div>
