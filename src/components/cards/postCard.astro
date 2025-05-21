@@ -22,19 +22,17 @@ interface Props {
       alt={title}
       loading="lazy"
     />
-    <figcaption class="group mx-2 mt-4 grid">
+    <figcaption class="mx-2 mt-4 grid">
       <time
         class="text-xs mb-3 text-neutral-800 dark:text-neutral-400"
         datetime={pubDate}>
         {pubDate}
       </time>
       <>
-        <a
-          class="hidden place-self-start font-bold group-hover:inline-block"
-          href={url}>
+        <a class="place-self-start font-bold" href={url}>
           {title}
         </a>
-        <h3 class="group-hover:hidden">{title}</h3>
+        <!-- <h3 class="group-hover:hidden">{title}</h3> -->
       </>
     </figcaption>
   </figure>
