@@ -7,5 +7,7 @@
         "parser": "astro"
       }
     }
-  ]
+  ],
+  "htmlWhitespaceSensitivity": "ignore",
+  "bracketSameLine": true
 }
