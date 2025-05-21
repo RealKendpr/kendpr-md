@@ -7,7 +7,8 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "formatAstro": "prettier --plugin=prettier-plugin-astro  --plugin=prettier-plugin-tailwindcss --write ./src/**/*.astro --cache"
   },
   "keywords": [],
   "author": "Kendpr",
@@ -29,7 +30,7 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.12",
-    "prettier": "^3.2.5",
+    "prettier": "^3.5.3",
     "prettier-plugin-astro": "^0.13.0",
     "prettier-plugin-tailwindcss": "^0.6.11"
   }
