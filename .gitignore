@@ -3,3 +3,4 @@ dist
 test-*.*
 src/pages/posts/template.*
 .astro
+.wrangler
