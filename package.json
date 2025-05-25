@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "astro dev",
+    "wranglerDev": "npx astro build && npx wrangler dev",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
