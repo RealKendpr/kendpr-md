@@ -8,7 +8,7 @@ const posts = await getCollection("posts");
 
 {
   posts.length !== 0 && (
-    <Section title="Posts" linkText="See more Posts" linkUrl="/kendpr-md/posts">
+    <Section title="Posts" linkText="See more Posts" linkUrl="/posts">
       {posts
         .sort(
           (a, b) =>
