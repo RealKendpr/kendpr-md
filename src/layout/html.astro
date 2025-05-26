@@ -1,5 +1,5 @@
 ---
-const { title, forPost, metaTags } = Astro.props;
+const { title, metaTags } = Astro.props;
 
 import logoForDark from "../assets/icons/logo-for-dark.svg";
 import MetaTags from "./metaTags.astro";
@@ -11,13 +11,13 @@ interface Props {
 }
 ---
 
-<html class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href={logoForDark.src} type="image/svg+xml" />
     <title>{title}</title>
-    {forPost && metaTags != null ? <MetaTags metaTags={metaTags} /> : null}
+    {metaTags != null ? <MetaTags metaTags={metaTags} /> : null}
   </head>
   <slot />
 

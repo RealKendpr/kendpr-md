@@ -1,9 +1,11 @@
 export function NavLinks({
   pageType,
   setDialogStatus,
+  footer,
 }: {
   pageType: string;
   setDialogStatus?: React.Dispatch<React.SetStateAction<string>>;
+  footer?: boolean;
 }) {
   const baseUrl = import.meta.env.BASE_URL;
 
@@ -16,7 +18,7 @@ export function NavLinks({
   ];
 
   return (
-    <ul className="grid gap-1 place-self-end">
+    <ul className={`grid gap-1 ${footer ? "justify-self-end" : ""}`}>
       {linkList.map((link) => (
         <li
           data-iscurrentpage={

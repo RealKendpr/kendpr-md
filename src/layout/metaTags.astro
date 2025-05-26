@@ -9,6 +9,7 @@ interface Props {
 const { title, description, image, url } = metaTags;
 
 const img = () => {
+  if (!image) return null;
   if (image.internal) {
     const imageSource = new URL(ghUserContent + image.src);
     return imageSource;
