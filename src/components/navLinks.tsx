@@ -7,8 +7,6 @@ export function NavLinks({
   setDialogStatus?: React.Dispatch<React.SetStateAction<string>>;
   footer?: boolean;
 }) {
-  const baseUrl = import.meta.env.BASE_URL;
-
   const linkList = [
     { url: "/", text: "Home" },
     { url: "/#about", text: "About Me" },
@@ -32,7 +30,7 @@ export function NavLinks({
             onClick={() => {
               setDialogStatus ? setDialogStatus("close") : null;
             }}
-            href={`${baseUrl}${link.url}`}>
+            href={link.url}>
             {link.text}
           </a>
         </li>

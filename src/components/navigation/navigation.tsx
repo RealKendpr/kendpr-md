@@ -14,7 +14,7 @@ export function Navigation({ pageType }: { pageType: string }) {
   return (
     <nav className="bg-opacity-50 fixed top-0 right-0 left-0 z-40 border-b border-b-neutral-700 bg-neutral-800 backdrop-blur-md">
       <div className="mx-auto flex max-w-(--breakpoint-sm) justify-between px-[3%] py-2 sm:px-0">
-        <a href="/kendpr-md">
+        <a href="/">
           <Logo location="navigation" />
         </a>
         {dialogStatus === "close" && (

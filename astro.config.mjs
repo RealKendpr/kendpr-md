@@ -11,8 +11,8 @@ export default defineConfig({
       theme: "houston",
     },
   },
-  site: "https://realkendpr.github.io",
-  base: "/kendpr-md",
+  // site: "https://realkendpr.github.io",
+  // base: "/kendpr-md",
   vite: {
     plugins: [tailwindcss()],
   },
