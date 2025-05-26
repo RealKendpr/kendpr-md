@@ -7,7 +7,7 @@ export function Logo({ location }: { location: string }) {
         <img
           loading={location === "navigation" ? "eager" : "lazy"}
           src={icondark.src}
-          alt="kendpr Logo"
+          alt="Website Logo"
           width={32}
           height={32}
         />
