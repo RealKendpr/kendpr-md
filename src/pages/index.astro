@@ -6,9 +6,16 @@ import Projects from "../components/sections/projects.astro";
 import LatestPosts from "../components/sections/latestPosts.astro";
 import Column from "../layout/column.astro";
 import Html from "../layout/html.astro";
+import type { MetaTagProps } from "../type/metaTypes";
+
+const metaTags: MetaTagProps = {
+  title: "Ken Rula",
+  description: "",
+  url: Astro.url,
+};
 ---
 
-<Html title="Kendpr">
+<Html title="Ken Rula" metaTags={metaTags}>
   <MainLayout pageType="Home">
     <Column>
       <header class="grid min-h-[calc(100dvh-175px)] content-center">

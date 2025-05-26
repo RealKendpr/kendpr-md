@@ -1,7 +1,7 @@
 export interface MetaTagProps {
   title: string;
   description: string;
-  image: {
+  image?: {
     internal: boolean;
     src: string;
   };
