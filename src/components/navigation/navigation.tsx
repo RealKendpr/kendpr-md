@@ -20,7 +20,7 @@ export function Navigation({ pageType }: { pageType: string }) {
         {dialogStatus === "close" && (
           <button
             onClick={() => setDialogStatus("open")}
-            className="squish text-2xl duration-150 ease-in-out hover:cursor-pointer">
+            className="squish text-2xl duration-150 ease-in-out">
             &#129386;
           </button>
         )}
