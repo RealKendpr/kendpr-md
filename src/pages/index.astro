@@ -19,12 +19,33 @@ const metaTags: MetaTagProps = {
   <MainLayout pageType="Home">
     <Column>
       <header class="grid min-h-[calc(100dvh-175px)] content-center">
-        <h1 class="flex text-4xl tracking-tight text-balance">
-          <span class="text-2xl select-none" aria-hidden="true">
-            &gt;&nbsp;
-          </span>
-          <span>Building fast and responsive websites.</span>
-        </h1>
+        <div>
+          <h1 class="flex text-4xl tracking-tight text-balance">
+            <span class="text-2xl select-none" aria-hidden="true">
+              &gt;&nbsp;
+            </span>
+            <span>Building fast and responsive websites.</span>
+          </h1>
+          <button
+            class="py-2 px-3 text-neutral-400 border hover:bg-accent-light/50 hover:border-transparent transition-colors duration-300 border-neutral-400 rounded mt-4 font-semibold flex gap-x-1.5 items-center"
+            type="button">
+            <span>Let's Talk</span>
+            <svg
+              aria-hidden="true"
+              width="16"
+              height="16"
+              viewBox="0 0 15 15"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z"
+                fill="currentColor"
+                fill-rule="evenodd"
+                clip-rule="evenodd">
+              </path>
+            </svg>
+          </button>
+        </div>
       </header>
       <main
         class="maxSm:border-b mx-auto grid max-w-(--breakpoint-xsm) justify-items-center gap-y-20 border-t border-y-neutral-700 pt-8 pb-16">
