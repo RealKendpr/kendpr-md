@@ -19,6 +19,8 @@ export function Navigation({ pageType }: { pageType: string }) {
         </a>
         {dialogStatus === "close" && (
           <button
+            aria-label="Sandwhich Menu"
+            title="Sandwhich Menu"
             onClick={() => setDialogStatus("open")}
             className="squish text-2xl duration-150 ease-in-out">
             &#129386;

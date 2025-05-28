@@ -116,6 +116,7 @@ export const ShootingStars: React.FC<ShootingStarsProps> = ({
 
   return (
     <svg
+      aria-hidden={true}
       ref={svgRef}
       className={cn("fixed inset-0 -z-10 h-full w-full", className)}>
       {star && (

@@ -19,12 +19,32 @@ const metaTags: MetaTagProps = {
   <MainLayout pageType="Home">
     <Column>
       <header class="grid min-h-[calc(100dvh-175px)] content-center">
-        <h1 class="flex text-4xl tracking-tight text-balance">
-          <span class="text-2xl select-none" aria-hidden="true">
-            &gt;&nbsp;
-          </span>
-          <span>Building fast and responsive websites.</span>
-        </h1>
+        <div>
+          <h1 class="flex text-4xl tracking-tight text-balance">
+            <span class="text-2xl select-none" aria-hidden="true">
+              &gt;&nbsp;
+            </span>
+            <span>Building fast and responsive websites.</span>
+          </h1>
+          <button
+            class="py-2 px-4 text-neutral-400 border hover:bg-accent-light/50 hover:border-transparent transition-colors duration-300 border-neutral-400 rounded mt-4 font-semibold flex gap-x-1.5 items-center"
+            type="button">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 15 15"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M1 2C0.447715 2 0 2.44772 0 3V12C0 12.5523 0.447715 13 1 13H14C14.5523 13 15 12.5523 15 12V3C15 2.44772 14.5523 2 14 2H1ZM1 3L14 3V3.92494C13.9174 3.92486 13.8338 3.94751 13.7589 3.99505L7.5 7.96703L1.24112 3.99505C1.16621 3.94751 1.0826 3.92486 1 3.92494V3ZM1 4.90797V12H14V4.90797L7.74112 8.87995C7.59394 8.97335 7.40606 8.97335 7.25888 8.87995L1 4.90797Z"
+                fill="currentColor"
+                fill-rule="evenodd"
+                clip-rule="evenodd">
+              </path>
+            </svg>
+            <span class="italic">contact@kenrula.com</span>
+          </button>
+        </div>
       </header>
       <main
         class="maxSm:border-b mx-auto grid max-w-(--breakpoint-xsm) justify-items-center gap-y-20 border-t border-y-neutral-700 pt-8 pb-16">
@@ -32,15 +52,15 @@ const metaTags: MetaTagProps = {
           class="prose-h2:text-3xl first-of-type:prose-p:mb-3 prose-h2:tracking-tight first-of-type:prose-p:mt-8 prose-p:leading-7 prose-h2:font-semibold!">
           <About />
         </section>
-        <section id="posts">
-          <LatestPosts />
-        </section>
-        <section id="works">
-          <Projects />
-        </section>
         <div class="prose-p:text-pretty w-full">
           <SkillCards type="frontend" />
         </div>
+        <section id="works">
+          <Projects />
+        </section>
+        <section id="posts">
+          <LatestPosts />
+        </section>
       </main>
     </Column>
   </MainLayout>

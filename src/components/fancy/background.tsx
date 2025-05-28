@@ -137,6 +137,7 @@ export const StarsBackground: React.FC<StarBackgroundProps> = ({
   return (
     <canvas
       ref={canvasRef}
+      aria-hidden={true}
       className={cn("fixed inset-0 -z-10 h-full w-full", className)}
     />
   );
