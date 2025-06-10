@@ -4,7 +4,7 @@ export function NavLinks({
   footer,
 }: {
   pageType: string;
-  setDialogStatus?: React.Dispatch<React.SetStateAction<string>>;
+  setDialogStatus?: React.Dispatch<React.SetStateAction<"close" | "open">>;
   footer?: boolean;
 }) {
   const linkList = [

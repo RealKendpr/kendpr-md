@@ -80,12 +80,6 @@
       transform: scale(1);
     }
   }
-  .open-dialog {
-    animation-name: drop, enlarge;
-    animation-duration: 100ms, 200ms;
-    animation-delay: 0, 300ms;
-    animation-timing-function: ease-in-out;
-  }
 
   :root {
     --border-clr: #495057;
