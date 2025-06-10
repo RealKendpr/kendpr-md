@@ -51,16 +51,17 @@ const metaTags: MetaTagProps = {
       <main
         class="maxSm:border-b mx-auto grid max-w-(--breakpoint-xsm) justify-items-center gap-y-20 border-t border-y-neutral-700 pt-8 pb-16">
         <section
-          class="prose-h2:text-3xl first-of-type:prose-p:mb-3 prose-h2:tracking-tight first-of-type:prose-p:mt-8 prose-p:leading-7 prose-h2:font-semibold!">
+          id="about"
+          class="prose-h2:text-3xl first-of-type:prose-p:mb-3 scroll-mt-24 prose-h2:tracking-tight first-of-type:prose-p:mt-8 prose-p:leading-7 prose-h2:font-semibold!">
           <About />
         </section>
         <div class="prose-p:text-pretty w-full">
           <SkillCards type="frontend" />
         </div>
-        <section id="works">
+        <section id="works" class="scroll-mt-14">
           <Projects />
         </section>
-        <section id="posts">
+        <section id="posts" class="scroll-mt-14">
           <LatestPosts />
         </section>
       </main>
