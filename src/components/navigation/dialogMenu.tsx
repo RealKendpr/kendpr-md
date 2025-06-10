@@ -8,8 +8,8 @@ export function DialogMenu({
   setDialogStatus,
 }: {
   pageType: string;
-  dialogStatus: string;
-  setDialogStatus: React.Dispatch<React.SetStateAction<string>>;
+  dialogStatus: "close" | "open";
+  setDialogStatus: React.Dispatch<React.SetStateAction<"close" | "open">>;
 }) {
   const dialog = useRef<HTMLDialogElement>(null);
 
@@ -29,11 +29,13 @@ export function DialogMenu({
     <dialog
       onClick={() => setDialogStatus("close")}
       ref={dialog}
-      className="open:open-dialog fixed m-auto w-3/4 max-w-[500px] rounded-2xl border border-neutral-700 bg-neutral-900 backdrop:bg-neutral-900/50 backdrop:backdrop-blur-md"
-      aria-labelledby="Menu"
-      title="Menu">
+      className="group invisible fixed grid min-h-dvh min-w-full place-items-center bg-neutral-900/50 backdrop-blur-md open:visible"
+      aria-hidden={true}>
       <div
-        className="flex flex-col-reverse px-[clamp(1rem,5%,2rem)] py-4"
+        className="flex w-3/4 max-w-[500px] scale-0 flex-col-reverse rounded-2xl border border-neutral-700 bg-neutral-900 px-[clamp(1rem,5%,2rem)] py-4 opacity-50 transition-all duration-200 ease-out group-open:scale-100 group-open:opacity-100"
+        tabIndex={0}
+        aria-label="Menu"
+        aria-hidden={dialogStatus === "close" ? true : false}
         onClick={(e) => e.stopPropagation()}>
         <div className="prose-ul:last-of-type:mt-4">
           <NavLinks pageType={pageType} setDialogStatus={setDialogStatus} />
