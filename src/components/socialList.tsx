@@ -14,7 +14,7 @@ interface SocialTypes {
 
 const social: SocialTypes[] = [
   {
-    url: "https://github.com/RealKendpr/",
+    url: "https://github.com/kenwhatts/",
     text: "Github",
     icon: {
       darkmode: github.src,
